@@ -193,6 +193,18 @@ export default {
   padding: 0 117px;
 }
 
+.statistics-panel :deep(.panel-content) {
+  max-width: none;
+}
+
+.statistics-panel :deep(.statistics-grid) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: calc(479px * 2 + 2rem);
+  margin: 0 auto;
+}
+
 .boxes-wrapper {
   background: white;
   padding: 0 117px;
@@ -208,6 +220,8 @@ export default {
   gap: 2rem;
   justify-content: center;
   align-items: start;
+  max-width: calc(479px * 2 + 2rem);
+  margin: 0 auto;
 }
 
 /* Tablet */

@@ -10,7 +10,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import '@/assets/styles/main.css'
-import { initKeyboardNavigationDetection, preloadResource } from '@/utils/accessibility'
+import { initKeyboardNavigationDetection } from '@/utils/accessibility'
+import { preloadResource } from '@/utils/performance'
 
 // Inicializa detecção de navegação por teclado
 initKeyboardNavigationDetection()

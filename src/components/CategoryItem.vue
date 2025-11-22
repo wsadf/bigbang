@@ -53,11 +53,10 @@ export default {
       return colors[categoryName] || '#6b7280'
     },
     getCategoryIcon(categoryName) {
-      // Por enquanto retorna um ícone padrão, pode ser ajustado depois
       const icons = {
-        'Compras': '@/assets/icons/shop.svg',
-        'Boletos': '@/assets/icons/shop.svg',
-        'Investimentos': '@/assets/icons/shop.svg'
+        'Compras': '@/assets/icons/bag.svg',
+        'Boletos': '@/assets/icons/barcode.svg',
+        'Investimentos': '@/assets/icons/trend-up.svg'
       }
       return icons[categoryName] || '@/assets/icons/shop.svg'
     }

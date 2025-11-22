@@ -49,6 +49,10 @@ http://localhost:3000
 
 (Adicione o link do deploy aqui quando disponível)
 
+## Screenshots
+
+Screenshots da aplicação funcionando estão disponíveis na pasta [`screenshots/`](./screenshots/).
+
 ## Decisões Técnicas Tomadas
 
 ### Arquitetura e Estrutura

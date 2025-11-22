@@ -50,25 +50,49 @@ http://localhost:3000
 ```
 /
 ├── src/
-│   ├── components/
-│   │   ├── Dashboard.vue          # Componente principal
-│   │   ├── Header.vue             # Cabeçalho com navegação
-│   │   ├── BalanceSection.vue     # Seção de saldo e rendimento
-│   │   ├── StatisticsPanel.vue    # Painel de estatísticas
-│   │   ├── StatisticCard.vue      # Card individual de estatística
+│   ├── assets/                    # Recursos estáticos
+│   │   ├── styles/                # Estilos CSS
+│   │   │   ├── main.css          # Estilos globais
+│   │   │   └── variables.css     # Variáveis CSS
+│   │   ├── images/               # Imagens
+│   │   ├── icons/                # Ícones
+│   │   └── fonts/                # Fontes customizadas
+│   ├── components/               # Componentes Vue
+│   │   ├── __tests__/            # Testes dos componentes
+│   │   ├── Dashboard.vue         # Componente principal
+│   │   ├── Header.vue            # Cabeçalho com navegação
+│   │   ├── BalanceSection.vue    # Seção de saldo e rendimento
+│   │   ├── StatisticsPanel.vue   # Painel de estatísticas
+│   │   ├── StatisticCard.vue     # Card individual de estatística
 │   │   ├── RecentTransactions.vue # Transações recentes
-│   │   ├── TransactionItem.vue    # Item individual de transação
-│   │   ├── GeneralAnalysis.vue    # Análise geral
-│   │   └── CategoryItem.vue       # Item de categoria
-│   ├── services/
-│   │   └── api.js                 # Serviço de API e formatação
-│   ├── App.vue                    # Componente raiz
-│   ├── main.js                    # Entry point
-│   └── style.css                  # Estilos globais
+│   │   ├── TransactionItem.vue   # Item individual de transação
+│   │   ├── GeneralAnalysis.vue   # Análise geral
+│   │   └── CategoryItem.vue      # Item de categoria
+│   ├── services/                 # Serviços
+│   │   ├── __tests__/            # Testes dos serviços
+│   │   └── api.js                # Serviço de API e formatação
+│   ├── data/                     # Dados mock (desenvolvimento)
+│   │   └── mockData.js
+│   ├── App.vue                   # Componente raiz
+│   └── main.js                   # Entry point
 ├── index.html
 ├── package.json
 ├── vite.config.js
+├── vitest.config.js
 └── README.md
+```
+
+### 📁 Assets
+
+A pasta `src/assets/` contém todos os recursos estáticos:
+- **styles/**: Estilos CSS globais e variáveis
+- **images/**: Imagens e fotos
+- **icons/**: Ícones SVG ou PNG
+- **fonts/**: Fontes customizadas
+
+Para usar assets nos componentes, utilize o alias `@`:
+```vue
+<img src="@/assets/images/logo.png" alt="Logo" />
 ```
 
 ## 📡 API

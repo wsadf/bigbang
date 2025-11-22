@@ -11,9 +11,9 @@
           aria-hidden="true"
         />
         <h3 id="transactions-title">Transações recentes</h3>
+        <span class="time-period" aria-label="Período: últimos 7 dias">últimos 7 dias</span>
       </div>
       <div class="header-right">
-        <span class="time-period" aria-label="Período: últimos 7 dias">últimos 7 dias</span>
         <a href="#" class="see-all-link" aria-label="Ver todas as transações">Ver tudo</a>
       </div>
     </div>
@@ -69,10 +69,19 @@ export default {
   gap: 1rem;
 }
 
+.header-right {
+  flex-shrink: 0;
+}
+
 .header-left {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex: 1;
+}
+
+.header-left .time-period {
+  margin-left: 0.5rem;
 }
 
 .transactions-icon {

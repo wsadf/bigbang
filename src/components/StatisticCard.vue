@@ -89,6 +89,9 @@ export default {
   flex-direction: column;
   transition: box-shadow var(--transition-base);
   min-height: 180px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
 }
 
 .card-title {
@@ -105,6 +108,8 @@ export default {
   margin: 0 0 auto 0;
   flex-grow: 1;
   line-height: 1.2;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .card-actions {
@@ -126,6 +131,10 @@ export default {
   border-radius: 0;
   transition: all var(--transition-base);
   flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .details-button:hover {
@@ -160,10 +169,16 @@ export default {
 @media (max-width: 1024px) {
   .statistic-card {
     padding: 1.35rem;
+    min-height: auto;
   }
 
   .card-value {
     font-size: 1.85rem;
+  }
+
+  .details-button {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.875rem;
   }
 }
 
@@ -173,24 +188,35 @@ export default {
 @media (max-width: 768px) {
   .statistic-card {
     padding: 1.25rem;
+    min-height: auto;
   }
 
   .card-title {
     font-size: 0.85rem;
+    margin-bottom: 1rem;
   }
 
   .card-value {
     font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-actions {
+    margin-top: auto;
+    padding-top: 0.875rem;
   }
 
   .details-button {
     font-size: 0.85rem;
     padding: 0.45rem 0.9rem;
+    white-space: normal;
+    text-align: center;
   }
 
   .menu-button {
     width: 36px;
     height: 36px;
+    flex-shrink: 0;
   }
 }
 
@@ -200,6 +226,7 @@ export default {
 @media (max-width: 480px) {
   .statistic-card {
     padding: 1rem;
+    min-height: auto;
   }
 
   .card-title {
@@ -209,22 +236,29 @@ export default {
 
   .card-value {
     font-size: 1.5rem;
+    margin-bottom: 0.875rem;
   }
 
   .card-actions {
-    margin-top: 0.75rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
     gap: 0.4rem;
+    flex-wrap: wrap;
   }
 
   .details-button {
     font-size: 0.8rem;
     padding: 0.4rem 0.75rem;
+    white-space: normal;
+    text-align: center;
+    min-width: 0;
   }
 
   .menu-button {
     width: 32px;
     height: 32px;
     padding: 0.4rem;
+    flex-shrink: 0;
   }
 }
 </style>

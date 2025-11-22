@@ -203,6 +203,7 @@ export default {
   gap: 1.5rem;
   max-width: calc(479px * 2 + 2rem);
   margin: 0 auto;
+  width: 100%;
 }
 
 .boxes-wrapper {
@@ -233,6 +234,12 @@ export default {
     margin-bottom: -80px;
   }
 
+  .statistics-panel :deep(.statistics-grid) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 100%;
+  }
+
   .boxes-wrapper {
     padding: 0 2rem;
     padding-top: 100px;
@@ -251,6 +258,12 @@ export default {
   .statistics-panel {
     padding: 0 1rem;
     margin-bottom: -60px;
+  }
+
+  .statistics-panel :deep(.statistics-grid) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
   }
 
   .boxes-wrapper {
@@ -295,6 +308,10 @@ export default {
   .statistics-panel {
     padding: 0 0.75rem;
     margin-bottom: -50px;
+  }
+
+  .statistics-panel :deep(.statistics-grid) {
+    gap: 0.875rem;
   }
 
   .boxes-wrapper {

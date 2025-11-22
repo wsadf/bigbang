@@ -17,9 +17,12 @@ body {
   font-weight: var(--font-weight-regular);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #1e1e1e;
+  background: linear-gradient(to bottom, #202027 0%, #202027 50%, #ffffff 50%, #ffffff 100%);
+  background-size: 100% 800px;
+  background-repeat: no-repeat;
   color: white;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 #app {

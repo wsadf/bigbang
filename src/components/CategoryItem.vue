@@ -32,6 +32,10 @@
 
 <script>
 import { formatPercentage } from '../services/api'
+import bagIcon from '../assets/icons/bag.svg'
+import barcodeIcon from '../assets/icons/barcode.svg'
+import trendUpIcon from '../assets/icons/trend-up.svg'
+import shopIcon from '../assets/icons/shop.svg'
 
 export default {
   name: 'CategoryItem',
@@ -54,11 +58,11 @@ export default {
     },
     getCategoryIcon(categoryName) {
       const icons = {
-        'Compras': '@/assets/icons/bag.svg',
-        'Boletos': '@/assets/icons/barcode.svg',
-        'Investimentos': '@/assets/icons/trend-up.svg'
+        'Compras': bagIcon,
+        'Boletos': barcodeIcon,
+        'Investimentos': trendUpIcon
       }
-      return icons[categoryName] || '@/assets/icons/shop.svg'
+      return icons[categoryName] || shopIcon
     }
   }
 }

@@ -1,184 +1,99 @@
 # BigBang - Dashboard Financeiro
 
-Dashboard financeiro responsivo desenvolvido com Vue.js que consome dados de uma API e exibe informações financeiras de forma clara e intuitiva.
+Dashboard financeiro responsivo desenvolvido com Vue.js que consome dados de uma API e exibe informações financeiras de forma clara e intuitiva. O projeto replica um design do Figma e apresenta dados de saldo, rendimento, estatísticas, transações recentes e análise de gastos.
 
-## 🚀 Funcionalidades
+## Tecnologias Utilizadas
 
-- **Consumo de API**: Requisições HTTP para buscar dados dinamicamente
-- **Dashboard Principal**: 
-  - Exibição de saldo total com rendimento
-  - Cards de estatísticas (Conta PJ, Recebimentos, Lucro)
-  - Lista de transações recentes com ícones e valores
-  - Análise geral com ganhos, saídas e breakdown por categoria
-- **Estados de Loading**: Indicadores visuais durante o carregamento
-- **Tratamento de Erros**: Mensagens amigáveis para erros de API (404, 500, timeout)
-- **Formatação**: Valores em Real (R$) e percentuais formatados corretamente
-- **Responsividade**: Layout adaptável para desktop e mobile
+- **Vue.js 3** - Framework JavaScript reativo para construção da interface
+- **TypeScript** - Tipagem estática para maior segurança e manutenibilidade do código
+- **Vite** - Build tool moderna e rápida para desenvolvimento e produção
+- **Axios** - Cliente HTTP para consumo da API
+- **Vitest** - Framework de testes unitários
+- **CSS3** - Estilização moderna com variáveis CSS e media queries
+- **ES6+** - JavaScript moderno com async/await, destructuring, arrow functions
 
-## 🛠️ Tecnologias
+## Como Instalar Dependências
 
-- **Vue.js 3**: Framework JavaScript reativo
-- **Vite**: Build tool e dev server
-- **CSS3**: Estilização moderna e responsiva
-- **ES6+**: JavaScript moderno
-
-## 📦 Instalação
-
-1. Clone o repositório:
-```bash
-git clone <url-do-repositorio>
-cd bigbang
-```
-
-2. Instale as dependências:
 ```bash
 npm install
 ```
 
-3. Inicie o servidor de desenvolvimento:
+## Como Rodar o Projeto Localmente
+
+1. **Instale as dependências** (se ainda não instalou):
+```bash
+npm install
+```
+
+2. **Inicie o servidor de desenvolvimento**:
 ```bash
 npm run dev
 ```
 
-4. Acesse no navegador:
+3. **Acesse no navegador**:
 ```
 http://localhost:3000
 ```
 
-## 🏗️ Estrutura do Projeto
+### Scripts Disponíveis
 
-```
-/
-├── src/
-│   ├── assets/                    # Recursos estáticos
-│   │   ├── styles/                # Estilos CSS
-│   │   │   ├── main.css          # Estilos globais
-│   │   │   └── variables.css     # Variáveis CSS
-│   │   ├── images/               # Imagens
-│   │   ├── icons/                # Ícones
-│   │   └── fonts/                # Fontes customizadas
-│   ├── components/               # Componentes Vue
-│   │   ├── __tests__/            # Testes dos componentes
-│   │   ├── Dashboard.vue         # Componente principal
-│   │   ├── Header.vue            # Cabeçalho com navegação
-│   │   ├── BalanceSection.vue    # Seção de saldo e rendimento
-│   │   ├── StatisticsPanel.vue   # Painel de estatísticas
-│   │   ├── StatisticCard.vue     # Card individual de estatística
-│   │   ├── RecentTransactions.vue # Transações recentes
-│   │   ├── TransactionItem.vue   # Item individual de transação
-│   │   ├── GeneralAnalysis.vue   # Análise geral
-│   │   └── CategoryItem.vue      # Item de categoria
-│   ├── services/                 # Serviços
-│   │   ├── __tests__/            # Testes dos serviços
-│   │   └── api.js                # Serviço de API e formatação
-│   ├── data/                     # Dados mock (desenvolvimento)
-│   │   └── mockData.js
-│   ├── App.vue                   # Componente raiz
-│   └── main.js                   # Entry point
-├── index.html
-├── package.json
-├── vite.config.js
-├── vitest.config.js
-└── README.md
-```
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera build de produção com type checking
+- `npm run preview` - Preview do build de produção
+- `npm run type-check` - Verifica tipos TypeScript
+- `npm run test` - Executa testes unitários
+- `npm run test:ui` - Executa testes com interface gráfica
+- `npm run test:coverage` - Executa testes com relatório de cobertura
 
-### 📁 Assets
+## Link do Deploy
 
-A pasta `src/assets/` contém todos os recursos estáticos:
-- **styles/**: Estilos CSS globais e variáveis
-- **images/**: Imagens e fotos
-- **icons/**: Ícones SVG ou PNG
-- **fonts/**: Fontes customizadas
+(Adicione o link do deploy aqui quando disponível)
 
-Para usar assets nos componentes, utilize o alias `@`:
-```vue
-<img src="@/assets/images/logo.png" alt="Logo" />
-```
+## Decisões Técnicas Tomadas
 
-## 📡 API
+### Arquitetura e Estrutura
+- **Componentes Vue reutilizáveis**: Criação de componentes compartilhados como `SectionHeader` para evitar duplicação de código
+- **Separação de responsabilidades**: Serviços isolados (`api.ts`) para lógica de negócio, componentes para apresentação
+- **TypeScript**: Implementado para type safety, melhor autocomplete e detecção de erros em tempo de desenvolvimento
+- **Organização de assets**: Estrutura clara com pastas separadas para estilos, ícones, imagens e fontes
 
-O dashboard consome dados da seguinte API:
+### Tratamento de Erros
+- **Retry automático com backoff exponencial**: Implementado para lidar com falhas temporárias da API (até 3 tentativas)
+- **Tratamento detalhado de erros HTTP**: Mensagens específicas para cada tipo de erro (404, 500, timeout, network)
+- **Validação de dados**: Validação da estrutura de dados recebida da API antes de processar
 
-**Endpoint**: `https://api.jsonbin.io/v3/b/691b5807d0ea881f40ee8674`
+### Performance
+- **Lazy loading de componentes**: Uso de `defineAsyncComponent` para carregar componentes apenas quando necessário
+- **Code splitting**: Configuração do Vite para separar chunks de vendor (Vue, Axios) e reduzir bundle inicial
+- **Memoização**: Uso de computed properties para evitar recálculos desnecessários
+- **Otimizações de build**: Minificação, tree shaking e remoção de console.log em produção
 
-### Estrutura esperada dos dados:
+### Acessibilidade
+- **ARIA completo**: Atributos ARIA em todos os componentes interativos para suporte a screen readers
+- **Navegação por teclado**: Suporte completo a Tab, Enter, Space e Escape
+- **Focus management**: Skip links e focus trap para melhor experiência de navegação
+- **Detecção de navegação por teclado**: Estilos diferenciados quando o usuário navega via teclado
 
-```json
-{
-  "saldoTotal": 304.78,
-  "rendimento": 124,
-  "estatisticas": [
-    {
-      "id": "conta-pj",
-      "titulo": "Conta PJ",
-      "valor": 39882
-    },
-    {
-      "id": "recebimentos",
-      "titulo": "Recebimentos",
-      "valor": 765.88
-    },
-    {
-      "id": "lucro",
-      "titulo": "Lucro",
-      "valor": 15887
-    }
-  ],
-  "transacoes": [
-    {
-      "id": "1",
-      "nome": "Mercadinho da Cidade",
-      "categoria": "Compras",
-      "valor": 10.98
-    }
-  ],
-  "analise": {
-    "ganhos": 2789.21,
-    "saidas": 1278.47,
-    "categorias": [
-      {
-        "nome": "Compras",
-        "percentual": 62
-      }
-    ]
-  }
-}
-```
+### Responsividade
+- **Mobile-first approach**: Design pensado primeiro para mobile, depois expandido para desktop
+- **Breakpoints consistentes**: Padronização de breakpoints (1024px, 768px, 480px) em todos os componentes
+- **Menu mobile**: Implementação de menu hambúrguer com overlay para melhor UX em dispositivos móveis
 
-## 🎨 Design
+### Testes
+- **Vitest**: Escolhido por ser rápido, compatível com Vite e ter boa integração com Vue
+- **Cobertura de casos críticos**: Testes focados em tratamento de erros, transformação de dados e formatação
 
-O dashboard replica o design fornecido no Figma com:
-- Tema escuro na seção superior (header e saldo)
-- Tema claro na seção inferior (transações e análise)
-- Cores e tipografia consistentes
-- Ícones SVG para melhor qualidade
-- Animações suaves e transições
+## Melhorias Futuras
 
-## 📱 Responsividade
-
-O layout é totalmente responsivo e se adapta a diferentes tamanhos de tela:
-- **Desktop**: Layout em grid com múltiplas colunas
-- **Tablet**: Ajuste de colunas e espaçamentos
-- **Mobile**: Layout em coluna única com otimizações de toque
-
-## ♿ Acessibilidade
-
-- Navegação por teclado
-- Atributos ARIA em elementos interativos
-- Contraste adequado de cores
-- Foco visível em elementos interativos
-
-## 🧪 Scripts Disponíveis
-
-- `npm run dev`: Inicia o servidor de desenvolvimento
-- `npm run build`: Gera build de produção
-- `npm run preview`: Preview do build de produção
-
-## 📝 Licença
-
-Este projeto foi desenvolvido como parte de um desafio técnico.
-
-## 👨‍💻 Desenvolvido por
-
-Desenvolvido com ❤️ usando Vue.js
-
+- [ ] Implementar cache de dados da API para reduzir requisições
+- [ ] Adicionar filtros e ordenação nas transações
+- [ ] Implementar gráficos interativos para visualização de dados
+- [ ] Adicionar modo escuro/claro configurável pelo usuário
+- [ ] Implementar PWA (Progressive Web App) para uso offline
+- [ ] Adicionar mais testes de integração e E2E
+- [ ] Implementar internacionalização (i18n) para múltiplos idiomas
+- [ ] Adicionar animações mais elaboradas e micro-interações
+- [ ] Implementar virtual scrolling para listas muito grandes
+- [ ] Adicionar exportação de dados (PDF, CSV)
+- [ ] Implementar notificações em tempo real
+- [ ] Adicionar dashboard de métricas de performance

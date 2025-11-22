@@ -118,8 +118,8 @@ export default {
 }
 
 .transaction-icon {
-  width: 48px;
-  height: 48px;
+  width: 31px;
+  height: 31px;
   border-radius: 8px;
   border: 1px solid;
   display: flex;
@@ -138,13 +138,13 @@ export default {
   flex: 1;
   font-weight: 400;
   color: #000;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 .transaction-amount {
   font-weight: 400;
   color: #000;
-  font-size: 1rem;
+  font-size: 14px;
   flex-shrink: 0;
 }
 

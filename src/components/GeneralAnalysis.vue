@@ -81,8 +81,8 @@ export default {
 .general-analysis {
   background: white;
   border-radius: 0;
-  padding: 1.25rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  box-shadow: none;
   width: 479px;
   height: 307px;
   display: flex;
@@ -96,6 +96,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.75rem;
+  padding: 1.25rem 1.25rem 0.625rem 1.25rem;
   padding-bottom: 0.625rem;
   border-bottom: 1px solid #e5e7eb;
   flex-wrap: wrap;
@@ -163,6 +164,7 @@ export default {
   flex: 1;
   overflow: hidden;
   min-height: 0;
+  padding: 0 1.25rem 1.25rem 1.25rem;
 }
 
 .divider {

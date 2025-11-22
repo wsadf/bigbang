@@ -162,8 +162,9 @@ export default {
 }
 
 .summary-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 1.5rem;
 }
 
@@ -171,6 +172,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 0 0 auto;
 }
 
 .summary-label {

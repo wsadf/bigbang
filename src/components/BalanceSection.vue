@@ -7,9 +7,14 @@
           {{ formatCurrency(balance) }}
         </div>
         <div class="yield-info" aria-label="Rendimento de {{ formatPercentage(yield) }}">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2" aria-hidden="true">
-            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
-          </svg>
+          <img 
+            src="@/assets/icons/ray.svg" 
+            alt="Ícone de raio" 
+            class="yield-icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
           <span>rendendo {{ formatPercentage(yield) }}</span>
         </div>
       </div>
@@ -129,9 +134,11 @@ export default {
   font-size: 1rem;
 }
 
-.yield-info svg {
-  color: #fbbf24;
-  fill: #fbbf24;
+.yield-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .balance-actions {

@@ -83,9 +83,11 @@ export default {
   border-radius: 0;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  width: 479px;
+  height: 291px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .section-header {

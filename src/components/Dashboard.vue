@@ -22,16 +22,18 @@
         :balance="processedData.saldoTotal" 
         :yield="processedData.rendimento" 
       />
-      <StatisticsPanel 
-        :statistics="processedData.estatisticas" 
-      />
-      <div class="bottom-section">
-        <RecentTransactions 
-          :transactions="processedData.transacoes" 
+      <div class="cards-and-boxes-container">
+        <StatisticsPanel 
+          :statistics="processedData.estatisticas" 
         />
-        <GeneralAnalysis 
-          :analysis="processedData.analise" 
-        />
+        <div class="bottom-section">
+          <RecentTransactions 
+            :transactions="processedData.transacoes" 
+          />
+          <GeneralAnalysis 
+            :analysis="processedData.analise" 
+          />
+        </div>
       </div>
     </div>
   </main>
@@ -177,28 +179,66 @@ export default {
   margin: 0 auto;
 }
 
+.cards-and-boxes-container {
+  position: relative;
+  padding: 0 117px;
+}
+
 .bottom-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 479px 479px;
   gap: 2rem;
-  padding: 2rem;
+  justify-content: center;
   align-items: start;
+  padding-top: 100px;
+}
+
+.statistics-panel-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 234px);
+  z-index: 10;
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
+  .cards-and-boxes-container {
+    padding: 0 2rem;
+  }
+
   .bottom-section {
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding-top: 80px;
+  }
+
+  .recent-transactions,
+  .general-analysis {
+    width: 100%;
+    height: auto;
+    min-height: 291px;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+  .cards-and-boxes-container {
+    padding: 0 1rem;
+  }
+
   .bottom-section {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 1rem;
+    padding-top: 60px;
+  }
+
+  .recent-transactions,
+  .general-analysis {
+    width: 100%;
+    height: auto;
+    min-height: 291px;
   }
 
   .loading-container,

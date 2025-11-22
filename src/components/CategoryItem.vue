@@ -49,9 +49,9 @@ export default {
     formatPercentage,
     getCategoryColor(categoryName) {
       const colors = {
-        'Compras': '#FF6B6B',
-        'Boletos': '#A78BFA',
-        'Investimentos': '#F8BBD0',
+        'Compras': '#FFB3BA', // light red/pink
+        'Boletos': '#C7CEEA', // light purple
+        'Investimentos': '#FFB3E6', // bright pink
         'Outros': '#6b7280'
       }
       return colors[categoryName] || '#6b7280'

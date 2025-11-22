@@ -153,7 +153,7 @@ export default {
 }
 
 .error-container p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.5rem;
 }
 

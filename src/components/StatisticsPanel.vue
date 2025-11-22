@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 .statistics-panel {
-  background: #1a1a1a;
+  background: #202027;
   padding: 2rem;
 }
 

@@ -82,6 +82,7 @@ export default {
   background: white;
   border-radius: 0;
   padding: 0;
+  padding-bottom: 47px;
   box-shadow: none;
   width: 479px;
   height: 307px;
@@ -95,9 +96,9 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.75rem;
-  padding: 1.25rem 1.25rem 0.625rem 1.25rem;
-  padding-bottom: 0.625rem;
+  margin-bottom: 0.375rem;
+  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid #e5e7eb;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -164,7 +165,7 @@ export default {
   flex-direction: column;
   gap: 0;
   flex: 1;
-  overflow: hidden;
+  overflow: visible;
   min-height: 0;
   padding: 0 1.25rem 1.25rem 1.25rem;
 }
@@ -173,7 +174,7 @@ export default {
   width: 100%;
   height: 1px;
   background: #e5e7eb;
-  margin: 0.375rem 0;
+  margin: 0.125rem 0 0.25rem 0;
   flex-shrink: 0;
 }
 
@@ -182,33 +183,35 @@ export default {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.5rem;
-  padding: 0.5rem 0;
+  padding: 0.125rem 0;
   flex-shrink: 0;
 }
 
 .summary-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
   flex: 0 0 auto;
 }
 
 .summary-label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #000;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .summary-value {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #000;
+  line-height: 1.2;
 }
 
 .categories-list {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 0.375rem;
   flex: 1;
   overflow: hidden;
   min-height: 0;

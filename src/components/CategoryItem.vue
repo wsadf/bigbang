@@ -72,7 +72,7 @@ export default {
 .category-item {
   display: flex;
   flex-direction: column;
-  gap: 0.375rem;
+  gap: 0.25rem;
   flex-shrink: 0;
 }
 
@@ -99,7 +99,7 @@ export default {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.375rem;
 }
 
 .category-header {

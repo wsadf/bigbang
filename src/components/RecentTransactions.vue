@@ -57,6 +57,7 @@ export default {
   background: white;
   border-radius: 0;
   padding: 0;
+  padding-bottom: 47px;
   box-shadow: none;
   width: 479px;
   height: 307px;

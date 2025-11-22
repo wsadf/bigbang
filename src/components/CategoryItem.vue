@@ -21,7 +21,7 @@
             class="progress-bar" 
             :style="{ 
               width: `${category.percentual}%`,
-              backgroundColor: category.cor || getCategoryColor(category.nome)
+              backgroundColor: getCategoryColor(category.nome)
             }"
           ></div>
         </div>

@@ -18,7 +18,6 @@
       </div>
     </div>
     <div class="analysis-content">
-      <div class="divider"></div>
       <div class="summary-row" role="group" aria-label="Resumo financeiro">
         <div class="summary-item">
           <span class="summary-label">Ganhos</span>
@@ -84,6 +83,9 @@ export default {
   border-radius: 0;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-header {
@@ -91,6 +93,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -158,7 +162,7 @@ export default {
   width: 100%;
   height: 1px;
   background: #e5e7eb;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .summary-row {
@@ -166,6 +170,7 @@ export default {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.5rem;
+  padding: 1rem 0;
 }
 
 .summary-item {

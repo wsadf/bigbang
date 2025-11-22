@@ -88,13 +88,14 @@ export default {
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.3s;
+  min-height: 180px;
 }
 
 .card-title {
   font-size: 0.9rem;
   color: #000;
   font-weight: 500;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
 }
 
 .card-value {
@@ -103,13 +104,15 @@ export default {
   color: #000;
   margin: 0 0 auto 0;
   flex-grow: 1;
+  line-height: 1.2;
 }
 
 .card-actions {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .details-button {

@@ -46,7 +46,11 @@ export default {
     getTransactionColor() {
       // Cores específicas por nome de transação
       const specificColors = {
-        'Mercadinho da Cidade': '#FDFF9D'
+        'Mercadinho da Cidade': '#FDFF9D',
+        'Tenda Nostra': '#FF9D9D',
+        'Farmácia Um': '#C8FF9D',
+        'Academia Body': '#AB9DFF',
+        'ShopOnline': '#FF9DEF'
       }
       
       // Se houver cor específica para esta transação, usa ela
@@ -63,7 +67,11 @@ export default {
       
       // Cores específicas para bordas
       const specificBorderColors = {
-        '#FDFF9D': '#fef9c3' // amarelo claro para Mercadinho da Cidade
+        '#FDFF9D': '#fef9c3', // amarelo claro para Mercadinho da Cidade
+        '#FF9D9D': '#ffd4d4', // rosa claro para Tenda Nostra
+        '#C8FF9D': '#e6ffd4', // verde claro para Farmácia Um
+        '#AB9DFF': '#e0d9ff', // roxo claro para Academia Body
+        '#FF9DEF': '#ffd4f7'  // rosa claro para ShopOnline
       }
       
       if (specificBorderColors[color]) {
@@ -98,12 +106,13 @@ export default {
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #B3B3B3;
   position: relative;
+  min-height: 50px;
 }
 
 .transaction-item:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid #B3B3B3;
 }
 
 .transaction-icon {

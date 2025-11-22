@@ -58,6 +58,9 @@ export default {
   border-radius: 0;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-header {
@@ -65,6 +68,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
   flex-wrap: wrap;
   gap: 1rem;
 }

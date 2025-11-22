@@ -16,21 +16,21 @@
     </div>
 
     <!-- Dashboard Content -->
-    <div v-else-if="dashboardData" class="dashboard-content">
+    <div v-else-if="processedData" class="dashboard-content">
       <Header />
       <BalanceSection 
-        :balance="dashboardData.saldoTotal || 0" 
-        :yield="dashboardData.rendimento || 0" 
+        :balance="processedData.saldoTotal" 
+        :yield="processedData.rendimento" 
       />
       <StatisticsPanel 
-        :statistics="dashboardData.estatisticas || []" 
+        :statistics="processedData.estatisticas" 
       />
       <div class="bottom-section">
         <RecentTransactions 
-          :transactions="dashboardData.transacoes || []" 
+          :transactions="processedData.transacoes" 
         />
         <GeneralAnalysis 
-          :analysis="dashboardData.analise || { ganhos: 0, saidas: 0, categorias: [] }" 
+          :analysis="processedData.analise" 
         />
       </div>
     </div>
@@ -41,13 +41,20 @@
 /**
  * Componente principal do Dashboard Financeiro
  * Gerencia o estado de loading, erro e exibição dos dados
+ * 
+ * Otimizações de performance:
+ * - Lazy loading de componentes pesados
+ * - Memoização de dados processados
  */
+import { defineAsyncComponent } from 'vue'
 import { fetchDashboardData } from '../services/api'
 import Header from './Header.vue'
-import BalanceSection from './BalanceSection.vue'
-import StatisticsPanel from './StatisticsPanel.vue'
-import RecentTransactions from './RecentTransactions.vue'
-import GeneralAnalysis from './GeneralAnalysis.vue'
+
+// Lazy loading de componentes para melhor performance
+const BalanceSection = defineAsyncComponent(() => import('./BalanceSection.vue'))
+const StatisticsPanel = defineAsyncComponent(() => import('./StatisticsPanel.vue'))
+const RecentTransactions = defineAsyncComponent(() => import('./RecentTransactions.vue'))
+const GeneralAnalysis = defineAsyncComponent(() => import('./GeneralAnalysis.vue'))
 
 export default {
   name: 'Dashboard',
@@ -63,6 +70,22 @@ export default {
       dashboardData: null, // Dados do dashboard vindos da API
       loading: true, // Estado de carregamento
       error: null // Mensagem de erro, se houver
+    }
+  },
+  computed: {
+    /**
+     * Memoização dos dados processados para evitar recálculos
+     */
+    processedData() {
+      if (!this.dashboardData) return null
+      
+      return {
+        saldoTotal: this.dashboardData.saldoTotal || 0,
+        rendimento: this.dashboardData.rendimento || 0,
+        estatisticas: this.dashboardData.estatisticas || [],
+        transacoes: this.dashboardData.transacoes || [],
+        analise: this.dashboardData.analise || { ganhos: 0, saidas: 0, categorias: [] }
+      }
     }
   },
   /**

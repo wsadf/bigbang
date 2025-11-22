@@ -2,11 +2,14 @@
   <section class="general-analysis" aria-labelledby="analysis-title">
     <div class="section-header">
       <div class="header-left">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"></circle>
-          <circle cx="12" cy="12" r="6"></circle>
-          <circle cx="12" cy="12" r="2"></circle>
-        </svg>
+        <img 
+          src="@/assets/icons/story.svg" 
+          alt="Ícone de análise" 
+          class="analysis-icon"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        />
         <h3 id="analysis-title">Análise geral</h3>
       </div>
       <div class="header-right">
@@ -96,6 +99,13 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.analysis-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .header-left h3 {

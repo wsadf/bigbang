@@ -166,13 +166,15 @@ export default {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
-  background: #a78bfa;
   color: white;
 }
 
 .action-button.primary {
+  width: 254px;
+  height: 37px;
   gap: 0.5rem;
-  padding: 0.875rem 1.5rem;
+  padding: 0;
+  background: #7986FE;
 }
 
 .action-button.primary svg {
@@ -181,7 +183,8 @@ export default {
 }
 
 .action-button.primary:hover {
-  background: #8b5cf6;
+  background: #6b78ee;
+  opacity: 0.9;
 }
 
 .action-button.secondary {

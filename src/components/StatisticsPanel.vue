@@ -17,12 +17,11 @@
       </div>
       <div class="statistics-grid">
         <StatisticCard
-          v-for="(stat, index) in statistics"
+          v-for="stat in statistics"
           :key="stat.id"
           :title="stat.titulo"
           :value="stat.valor"
           :id="stat.id"
-          :highlighted="stat.id === 'recebimentos'"
         />
         <p v-if="statistics.length === 0" class="empty-state">
           Nenhuma estatística disponível

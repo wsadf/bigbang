@@ -4,8 +4,8 @@
       <div class="header-left">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="8" x2="12" y2="12"></line>
-          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          <circle cx="12" cy="12" r="6"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
         </svg>
         <h3 id="analysis-title">Análise geral</h3>
       </div>
@@ -15,20 +15,22 @@
       </div>
     </div>
     <div class="analysis-content">
+      <div class="divider"></div>
       <div class="summary-row" role="group" aria-label="Resumo financeiro">
         <div class="summary-item">
           <span class="summary-label">Ganhos</span>
-          <span class="summary-value positive" :aria-label="`Ganhos: ${formatCurrency(analysis.ganhos)}`">
+          <span class="summary-value" :aria-label="`Ganhos: ${formatCurrency(analysis.ganhos)}`">
             {{ formatCurrency(analysis.ganhos) }}
           </span>
         </div>
         <div class="summary-item">
           <span class="summary-label">Saídas</span>
-          <span class="summary-value negative" :aria-label="`Saídas: ${formatCurrency(analysis.saidas)}`">
+          <span class="summary-value" :aria-label="`Saídas: ${formatCurrency(analysis.saidas)}`">
             {{ formatCurrency(analysis.saidas) }}
           </span>
         </div>
       </div>
+      <div class="divider"></div>
       <div class="categories-list" role="list" aria-label="Breakdown por categoria">
         <CategoryItem
           v-for="category in analysis.categorias"
@@ -76,7 +78,7 @@ export default {
 <style scoped>
 .general-analysis {
   background: white;
-  border-radius: 12px;
+  border-radius: 0;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -110,7 +112,7 @@ export default {
 }
 
 .time-period {
-  color: #666;
+  color: #999;
   font-size: 0.9rem;
 }
 
@@ -130,7 +132,14 @@ export default {
 .analysis-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 1rem 0;
 }
 
 .summary-row {
@@ -147,20 +156,14 @@ export default {
 
 .summary-label {
   font-size: 0.9rem;
-  color: #666;
+  color: #000;
+  font-weight: 400;
 }
 
 .summary-value {
   font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.summary-value.positive {
-  color: #10b981;
-}
-
-.summary-value.negative {
-  color: #ef4444;
+  font-weight: 700;
+  color: #000;
 }
 
 .categories-list {

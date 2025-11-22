@@ -1,7 +1,6 @@
 <template>
   <article 
     class="statistic-card" 
-    :class="{ 'highlighted': isHighlighted }"
     :aria-labelledby="`stat-${id}`"
   >
     <h4 :id="`stat-${id}`" class="card-title">{{ title }}</h4>
@@ -60,11 +59,6 @@ export default {
       default: false
     }
   },
-  computed: {
-    isHighlighted() {
-      return this.highlighted || this.id === 'recebimentos'
-    }
-  },
   methods: {
     formatCurrency,
     /**
@@ -93,12 +87,7 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  border: 2px solid transparent;
   transition: box-shadow 0.3s;
-}
-
-.statistic-card.highlighted {
-  border-color: #3b82f6;
 }
 
 .card-title {

@@ -96,7 +96,7 @@ export default {
 <style scoped>
 .balance-section {
   background: #202027;
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 0 2rem;
   color: white;
 }
 

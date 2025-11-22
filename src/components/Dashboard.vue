@@ -189,6 +189,7 @@ export default {
 .statistics-panel {
   position: relative;
   z-index: 10;
+  margin-top: 41px;
   margin-bottom: -80px;
   padding: 0 117px;
 }

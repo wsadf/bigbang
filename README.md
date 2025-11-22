@@ -51,7 +51,13 @@ http://localhost:3000
 
 ## Screenshots
 
-Screenshots da aplicação funcionando estão disponíveis na pasta [`screenshots/`](./screenshots/).
+### Desktop
+![Dashboard Desktop](./screenshots/desktop.png)
+
+### Mobile
+![Dashboard Mobile](./screenshots/mobile.png)
+
+Screenshots adicionais estão disponíveis na pasta [`screenshots/`](./screenshots/).
 
 ## Decisões Técnicas Tomadas
 

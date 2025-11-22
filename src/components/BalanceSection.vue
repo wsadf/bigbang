@@ -3,19 +3,21 @@
     <div class="balance-content">
       <div class="balance-info">
         <h2 id="balance-title" class="balance-label">Saldo total</h2>
-        <div class="balance-value" aria-label="Saldo total: {{ formatCurrency(balance) }}">
-          {{ formatCurrency(balance) }}
-        </div>
-        <div class="yield-info" aria-label="Rendimento de {{ formatPercentage(yield) }}">
-          <img 
-            src="@/assets/icons/ray.svg" 
-            alt="Ícone de raio" 
-            class="yield-icon"
-            width="20"
-            height="20"
-            aria-hidden="true"
-          />
-          <span>rendendo {{ formatPercentage(yield) }}</span>
+        <div class="balance-row">
+          <div class="balance-value" aria-label="Saldo total: {{ formatCurrency(balance) }}">
+            {{ formatCurrency(balance) }}
+          </div>
+          <div class="yield-info" aria-label="Rendimento de {{ formatPercentage(yield) }}">
+            <img 
+              src="@/assets/icons/ray.svg" 
+              alt="Ícone de raio" 
+              class="yield-icon"
+              width="20"
+              height="20"
+              aria-hidden="true"
+            />
+            <span>rendendo {{ formatPercentage(yield) }}</span>
+          </div>
         </div>
       </div>
       <div class="balance-actions" role="group" aria-label="Ações do saldo">
@@ -119,11 +121,18 @@ export default {
   font-weight: 400;
 }
 
+.balance-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .balance-value {
   font-size: 3rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .yield-info {
@@ -191,6 +200,12 @@ export default {
 @media (max-width: 768px) {
   .balance-section {
     padding: 2rem 1rem;
+  }
+
+  .balance-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .balance-value {

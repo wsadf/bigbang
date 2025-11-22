@@ -208,11 +208,12 @@ export default {
 
 .statistics-panel :deep(.statistics-grid) {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 351px);
   gap: 1.5rem;
-  max-width: calc(479px * 2 + 2rem);
+  max-width: calc(351px * 3 + 2rem);
   margin: 0 auto;
   width: 100%;
+  justify-content: center;
 }
 
 .boxes-wrapper {
@@ -244,7 +245,7 @@ export default {
   }
 
   .statistics-panel :deep(.statistics-grid) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.25rem;
     max-width: 100%;
   }

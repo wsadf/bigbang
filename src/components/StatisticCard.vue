@@ -88,8 +88,8 @@ export default {
   display: flex;
   flex-direction: column;
   transition: box-shadow var(--transition-base);
-  min-height: 180px;
-  width: 100%;
+  width: 351px;
+  height: 209px;
   box-sizing: border-box;
   overflow: visible;
 }
@@ -188,7 +188,9 @@ export default {
 @media (max-width: 768px) {
   .statistic-card {
     padding: 1.25rem;
-    min-height: auto;
+    width: 100%;
+    height: auto;
+    min-height: 180px;
   }
 
   .card-title {
@@ -226,7 +228,9 @@ export default {
 @media (max-width: 480px) {
   .statistic-card {
     padding: 1rem;
-    min-height: auto;
+    width: 100%;
+    height: auto;
+    min-height: 180px;
   }
 
   .card-title {

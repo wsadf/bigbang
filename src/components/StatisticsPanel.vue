@@ -93,10 +93,11 @@ export default {
 
 .statistics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 351px);
   gap: 1.5rem;
   width: 100%;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .empty-state {
@@ -113,7 +114,7 @@ export default {
   }
 
   .statistics-grid {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.25rem;
   }
 }

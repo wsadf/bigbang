@@ -135,6 +135,10 @@ export default {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .details-button:hover {
@@ -179,6 +183,7 @@ export default {
   .details-button {
     font-size: 0.85rem;
     padding: 0.5rem 0.875rem;
+    height: 40px;
   }
 }
 
@@ -213,6 +218,7 @@ export default {
     padding: 0.45rem 0.9rem;
     white-space: normal;
     text-align: center;
+    height: 36px;
   }
 
   .menu-button {
@@ -256,6 +262,7 @@ export default {
     white-space: normal;
     text-align: center;
     min-width: 0;
+    height: 32px;
   }
 
   .menu-button {

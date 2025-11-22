@@ -210,7 +210,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 351px);
   gap: 1.5rem;
-  max-width: calc(351px * 3 + 2rem);
+  max-width: calc(351px * 3 + 1.5rem * 2);
   margin: 0 auto;
   width: 100%;
   justify-content: center;

@@ -3,10 +3,14 @@
     <div class="panel-content">
       <div class="panel-header">
         <div class="header-left">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M5.64 18.36l4.24-4.24m4.24-4.24l4.24-4.24"></path>
-          </svg>
+          <img 
+            src="@/assets/icons/bubble.svg" 
+            alt="Ícone de painel" 
+            class="panel-icon"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
           <h3>Painel de estatísticas</h3>
         </div>
         <span class="time-period">últimos 7 dias</span>
@@ -67,6 +71,13 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.panel-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .header-left h3 {

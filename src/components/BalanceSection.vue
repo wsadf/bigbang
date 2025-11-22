@@ -27,7 +27,7 @@
           @keydown.enter.prevent="handleSendMoney"
           @keydown.space.prevent="handleSendMoney"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="22" y1="2" x2="11" y2="13"></line>
             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
           </svg>
@@ -39,7 +39,7 @@
           @keydown.enter.prevent="handleAdd"
           @keydown.space.prevent="handleAdd"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
@@ -159,42 +159,45 @@ export default {
 .action-button {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 1.5rem;
+  justify-content: center;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
+  background: #a78bfa;
+  color: white;
 }
 
 .action-button.primary {
-  background: #a78bfa;
-  color: white;
-  border-radius: 8px;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+}
+
+.action-button.primary svg {
+  stroke: white;
+  fill: none;
 }
 
 .action-button.primary:hover {
   background: #8b5cf6;
-  transform: translateY(-2px);
 }
 
 .action-button.secondary {
-  background: #a78bfa;
-  color: white;
-  padding: 0.875rem;
   width: 48px;
   height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
+  padding: 0;
+  min-width: 48px;
+}
+
+.action-button.secondary svg {
+  stroke: white;
+  fill: none;
 }
 
 .action-button.secondary:hover {
   background: #8b5cf6;
-  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

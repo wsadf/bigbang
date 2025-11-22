@@ -2,13 +2,14 @@
   <section class="recent-transactions" aria-labelledby="transactions-title">
     <div class="section-header">
       <div class="header-left">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="1"></circle>
-          <circle cx="19" cy="12" r="1"></circle>
-          <circle cx="5" cy="12" r="1"></circle>
-          <line x1="12" y1="12" x2="19" y2="12"></line>
-          <line x1="5" y1="12" x2="12" y2="12"></line>
-        </svg>
+        <img 
+          src="@/assets/icons/box-2.svg" 
+          alt="Ícone de transações" 
+          class="transactions-icon"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        />
         <h3 id="transactions-title">Transações recentes</h3>
       </div>
       <div class="header-right">
@@ -72,6 +73,13 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.transactions-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .header-left h3 {

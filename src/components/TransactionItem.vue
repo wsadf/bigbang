@@ -7,10 +7,14 @@
         borderColor: getBorderColor(transaction.cor || getIconColor(transaction.categoria))
       }"
     >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-      </svg>
+      <img 
+        src="@/assets/icons/shop.svg" 
+        alt="Ícone de loja" 
+        class="shop-icon"
+        width="20"
+        height="20"
+        aria-hidden="true"
+      />
     </div>
     <div class="transaction-name">{{ transaction.nome }}</div>
     <div class="transaction-amount">{{ formatCurrency(transaction.valor) }}</div>
@@ -42,8 +46,15 @@ export default {
     getBorderColor(color) {
       // Cria uma versão mais clara da cor para a borda
       if (!color) return '#e5e7eb'
-      // Se for uma cor hex, adiciona opacidade ou clareia
-      return color + '80' // Adiciona 50% de opacidade
+      // Mapeia cores para versões mais claras
+      const lightColors = {
+        '#fbbf24': '#fef3c7', // amarelo claro
+        '#ef4444': '#fecaca', // vermelho claro
+        '#8b5cf6': '#e9d5ff', // roxo claro
+        '#3b82f6': '#dbeafe', // azul claro
+        '#6b7280': '#e5e7eb'  // cinza claro
+      }
+      return lightColors[color] || color + '80'
     }
   }
 }
@@ -72,6 +83,12 @@ export default {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.shop-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .transaction-name {

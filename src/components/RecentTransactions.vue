@@ -105,7 +105,9 @@ export default {
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
+  padding: 0;
   color: #1a1a1a;
+  line-height: 1;
 }
 
 .header-right {

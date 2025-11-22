@@ -3,8 +3,8 @@
     <div 
       class="transaction-icon" 
       :style="{ 
-        backgroundColor: transaction.cor || getIconColor(transaction.categoria),
-        borderColor: getBorderColor(transaction.cor || getIconColor(transaction.categoria))
+        backgroundColor: transactionBackgroundColor,
+        borderColor: transactionBorderColor
       }"
     >
       <img 
@@ -43,9 +43,33 @@ export default {
       }
       return colors[category] || '#6b7280'
     },
+    getTransactionColor() {
+      // Cores específicas por nome de transação
+      const specificColors = {
+        'Mercadinho da Cidade': '#FDFF9D'
+      }
+      
+      // Se houver cor específica para esta transação, usa ela
+      if (specificColors[this.transaction.nome]) {
+        return specificColors[this.transaction.nome]
+      }
+      
+      // Caso contrário, usa a cor da API ou a cor padrão da categoria
+      return this.transaction.cor || this.getIconColor(this.transaction.categoria)
+    },
     getBorderColor(color) {
       // Cria uma versão mais clara da cor para a borda
       if (!color) return '#e5e7eb'
+      
+      // Cores específicas para bordas
+      const specificBorderColors = {
+        '#FDFF9D': '#fef9c3' // amarelo claro para Mercadinho da Cidade
+      }
+      
+      if (specificBorderColors[color]) {
+        return specificBorderColors[color]
+      }
+      
       // Mapeia cores para versões mais claras
       const lightColors = {
         '#fbbf24': '#fef3c7', // amarelo claro
@@ -55,6 +79,14 @@ export default {
         '#6b7280': '#e5e7eb'  // cinza claro
       }
       return lightColors[color] || color + '80'
+    }
+  },
+  computed: {
+    transactionBackgroundColor() {
+      return this.getTransactionColor()
+    },
+    transactionBorderColor() {
+      return this.getBorderColor(this.transactionBackgroundColor)
     }
   }
 }

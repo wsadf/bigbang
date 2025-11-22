@@ -161,7 +161,6 @@ export default {
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 8px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -175,6 +174,7 @@ export default {
   gap: 0.5rem;
   padding: 0;
   background: #7986FE;
+  border-radius: 0;
 }
 
 .action-button.primary svg {
@@ -188,10 +188,12 @@ export default {
 }
 
 .action-button.secondary {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 37px;
   padding: 0;
-  min-width: 48px;
+  min-width: 58px;
+  background: #7986FE;
+  border-radius: 0;
 }
 
 .action-button.secondary svg {
@@ -200,7 +202,8 @@ export default {
 }
 
 .action-button.secondary:hover {
-  background: #8b5cf6;
+  background: #6b78ee;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {

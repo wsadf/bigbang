@@ -189,7 +189,7 @@ export default {
 .statistics-panel {
   position: relative;
   z-index: 10;
-  margin-bottom: -100px;
+  margin-bottom: -80px;
   padding: 0 117px;
 }
 
@@ -208,7 +208,7 @@ export default {
 .boxes-wrapper {
   background: white;
   padding: 0 117px;
-  padding-top: 140px;
+  padding-top: 120px;
   padding-bottom: 2rem;
   position: relative;
   z-index: 1;

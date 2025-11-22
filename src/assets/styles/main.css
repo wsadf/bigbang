@@ -32,9 +32,52 @@ body {
 
 /* Acessibilidade */
 button:focus,
-a:focus {
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+/* Navegação por teclado - melhor visibilidade do foco */
+.keyboard-navigation button:focus,
+.keyboard-navigation a:focus,
+.keyboard-navigation input:focus,
+.keyboard-navigation textarea:focus,
+.keyboard-navigation select:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+}
+
+/* Screen reader only - elementos visíveis apenas para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* Scrollbar personalizada */

@@ -1,22 +1,31 @@
 <template>
   <main class="dashboard" role="main" aria-label="Dashboard financeiro">
+    <!-- Skip to main content link -->
+    <a href="#dashboard-content" class="skip-link">Pular para o conteúdo principal</a>
+
     <!-- Loading State -->
-    <div v-if="loading" class="loading-container" role="status" aria-live="polite" aria-label="Carregando dados">
+    <div v-if="loading" class="loading-container" role="status" aria-live="polite" aria-busy="true" aria-label="Carregando dados do dashboard">
       <div class="loading-spinner" aria-hidden="true"></div>
-      <p>Carregando dados...</p>
+      <p id="loading-message">Carregando dados...</p>
+      <span class="sr-only">Por favor, aguarde enquanto os dados são carregados</span>
     </div>
 
     <!-- Error State -->
-    <div v-else-if="error" class="error-container" role="alert" aria-live="assertive">
-      <h2>Erro ao carregar dados</h2>
-      <p>{{ error }}</p>
-      <button @click="loadData" class="retry-button" aria-label="Tentar carregar dados novamente">
+    <div v-else-if="error" class="error-container" role="alert" aria-live="assertive" aria-atomic="true">
+      <h2 id="error-title">Erro ao carregar dados</h2>
+      <p id="error-message" :aria-describedby="error ? 'error-title' : undefined">{{ error }}</p>
+      <button 
+        @click="loadData" 
+        class="retry-button" 
+        aria-label="Tentar carregar dados novamente"
+        :aria-describedby="'error-message'"
+      >
         Tentar novamente
       </button>
     </div>
 
     <!-- Dashboard Content -->
-    <div v-else-if="processedData" class="dashboard-content">
+    <div v-else-if="processedData" id="dashboard-content" class="dashboard-content" tabindex="-1">
       <Header />
       <BalanceSection 
         :balance="processedData.saldoTotal" 

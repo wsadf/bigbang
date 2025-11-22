@@ -105,9 +105,18 @@ export default {
   flex-shrink: 0;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .transaction-item {
+    padding: 0.9rem 0;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .transaction-item {
-    padding: 0.75rem;
+    padding: 0.75rem 0;
+    gap: 0.75rem;
   }
 
   .transaction-icon {
@@ -115,8 +124,47 @@ export default {
     height: 40px;
   }
 
+  .shop-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .transaction-name {
+    font-size: 0.95rem;
+  }
+
   .transaction-amount {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .transaction-item {
+    padding: 0.65rem 0;
+    gap: 0.65rem;
+  }
+
+  .transaction-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .shop-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .transaction-name {
+    font-size: 0.9rem;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .transaction-amount {
+    font-size: 0.9rem;
   }
 }
 </style>

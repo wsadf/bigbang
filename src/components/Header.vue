@@ -147,23 +147,92 @@ export default {
   display: block;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .nav-menu {
+    gap: 1rem;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .header {
     padding: 1rem;
   }
 
+  .header-content {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
   .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
     gap: 0.5rem;
-    font-size: 0.85rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+
+  .nav-menu::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-item {
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .logo {
     width: 70px;
-    height: 24px; /* Mantém proporção 87:30 */
+    height: 24px;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.75rem;
+  }
+
+  .nav-menu {
+    gap: 0.25rem;
+  }
+
+  .nav-item {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    width: 60px;
+    height: 20px;
+  }
+
+  .icon-button {
+    padding: 0.4rem;
+  }
+
+  .notification-icon {
+    width: 20px;
+    height: 20px;
   }
 }
 </style>

@@ -151,13 +151,71 @@ export default {
   color: #333;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .statistic-card {
+    padding: 1.35rem;
+  }
+
+  .card-value {
+    font-size: 1.85rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .statistic-card {
     padding: 1.25rem;
   }
 
+  .card-title {
+    font-size: 0.85rem;
+  }
+
   .card-value {
     font-size: 1.75rem;
+  }
+
+  .details-button {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .menu-button {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .statistic-card {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-value {
+    font-size: 1.5rem;
+  }
+
+  .card-actions {
+    margin-top: 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .details-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .menu-button {
+    width: 32px;
+    height: 32px;
+    padding: 0.4rem;
   }
 }
 </style>

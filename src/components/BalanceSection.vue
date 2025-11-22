@@ -206,6 +206,22 @@ export default {
   opacity: 0.9;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .balance-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .balance-value {
+    font-size: 2.5rem;
+  }
+
+  .action-button.primary {
+    width: 220px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .balance-section {
     padding: 2rem 1rem;
@@ -221,18 +237,71 @@ export default {
     font-size: 2rem;
   }
 
+  .yield-info {
+    font-size: 0.9rem;
+  }
+
   .balance-content {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1.5rem;
   }
 
   .balance-actions {
     width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .action-button {
-    flex: 1;
+    width: 100%;
     justify-content: center;
+  }
+
+  .action-button.primary {
+    width: 100%;
+  }
+
+  .action-button.secondary {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .balance-section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .balance-label {
+    font-size: 0.85rem;
+  }
+
+  .balance-value {
+    font-size: 1.75rem;
+  }
+
+  .yield-info {
+    font-size: 0.85rem;
+  }
+
+  .yield-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .action-button {
+    height: 44px;
+    font-size: 0.9rem;
+  }
+
+  .action-button.primary {
+    height: 44px;
+  }
+
+  .action-button.secondary {
+    height: 44px;
   }
 }
 </style>

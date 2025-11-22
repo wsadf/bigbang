@@ -138,6 +138,14 @@ export default {
   font-size: 0.95rem;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .recent-transactions {
+    padding: 1.35rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .recent-transactions {
     padding: 1.25rem;
@@ -146,11 +154,54 @@ export default {
   .section-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .header-left {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .header-left h3 {
+    font-size: 1.1rem;
+  }
+
+  .header-left .time-period {
+    margin-left: 0;
+    font-size: 0.85rem;
   }
 
   .header-right {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+  }
+
+  .see-all-link {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .recent-transactions {
+    padding: 1rem 0.75rem;
+  }
+
+  .section-header {
+    margin-bottom: 1rem;
+  }
+
+  .header-left h3 {
+    font-size: 1rem;
+  }
+
+  .transactions-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .see-all-link {
+    font-size: 0.8rem;
   }
 }
 </style>

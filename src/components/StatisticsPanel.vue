@@ -105,6 +105,19 @@ export default {
   grid-column: 1 / -1;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .statistics-panel {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .statistics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .statistics-panel {
     padding: 1.5rem 1rem;
@@ -112,12 +125,41 @@ export default {
 
   .statistics-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .panel-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  .header-left h3 {
+    font-size: 1.1rem;
+  }
+
+  .time-period {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .statistics-panel {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .panel-header {
+    gap: 0.25rem;
+  }
+
+  .header-left h3 {
+    font-size: 1rem;
+  }
+
+  .panel-icon {
+    width: 18px;
+    height: 18px;
   }
 }
 </style>

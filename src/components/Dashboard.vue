@@ -184,10 +184,75 @@ export default {
   padding: 2rem;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .bottom-section {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .bottom-section {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
     padding: 1rem;
+  }
+
+  .loading-container,
+  .error-container {
+    padding: 1.5rem;
+  }
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+  }
+
+  .error-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .error-container p {
+    font-size: 0.9rem;
+  }
+
+  .retry-button {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .bottom-section {
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+
+  .loading-container,
+  .error-container {
+    padding: 1rem;
+  }
+
+  .loading-spinner {
+    width: 35px;
+    height: 35px;
+  }
+
+  .error-container h2 {
+    font-size: 1.1rem;
+  }
+
+  .error-container p {
+    font-size: 0.85rem;
+  }
+
+  .retry-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 }
 </style>

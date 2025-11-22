@@ -132,5 +132,58 @@ export default {
   border-radius: 0;
   transition: width 0.5s ease;
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .category-content {
+    gap: 0.65rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .category-content {
+    gap: 0.6rem;
+  }
+
+  .category-name,
+  .category-percentage {
+    font-size: 0.9rem;
+  }
+
+  .category-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .progress-bar-container {
+    height: 7px;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .category-item {
+    gap: 0.4rem;
+  }
+
+  .category-content {
+    gap: 0.5rem;
+  }
+
+  .category-name,
+  .category-percentage {
+    font-size: 0.85rem;
+  }
+
+  .category-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .progress-bar-container {
+    height: 6px;
+  }
+}
 </style>
 

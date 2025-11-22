@@ -212,6 +212,7 @@ export default {
   padding-bottom: 2rem;
   position: relative;
   z-index: 1;
+  overflow: visible;
 }
 
 .bottom-section {
@@ -244,7 +245,8 @@ export default {
   .general-analysis {
     width: 100%;
     height: auto;
-    min-height: 291px;
+    min-height: 307px;
+    overflow: visible;
   }
 }
 

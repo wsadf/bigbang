@@ -56,24 +56,26 @@ export default {
 .recent-transactions {
   background: white;
   border-radius: 0;
-  padding: 1.5rem;
+  padding: 1.25rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 479px;
-  height: 291px;
+  height: 307px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.625rem;
   border-bottom: 1px solid #e5e7eb;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
+  flex-shrink: 0;
 }
 
 .header-right {
@@ -136,6 +138,9 @@ export default {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .empty-state {

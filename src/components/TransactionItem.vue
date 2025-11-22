@@ -104,11 +104,13 @@ export default {
 .transaction-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 0.75rem;
+  padding: 0;
   border-bottom: 1px solid #B3B3B3;
   position: relative;
-  min-height: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .transaction-item:last-child {

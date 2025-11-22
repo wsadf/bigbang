@@ -14,6 +14,7 @@
 
 body {
   font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-light);

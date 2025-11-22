@@ -1,7 +1,15 @@
 <template>
   <header class="header" role="banner">
     <div class="header-content">
-      <div class="logo" role="img" aria-label="BigBang Logo">BigBang</div>
+      <a href="/" class="logo-link" aria-label="BigBang - Ir para página inicial">
+        <img 
+          src="@/assets/images/logo.svg" 
+          alt="BigBang Logo" 
+          class="logo"
+          width="87"
+          height="30"
+        />
+      </a>
       <nav class="nav-menu" role="navigation" aria-label="Navegação principal">
         <a href="#" class="nav-item active" aria-current="page">Dashboard</a>
         <a href="#" class="nav-item">Pagamentos</a>
@@ -62,10 +70,22 @@ export default {
   justify-content: space-between;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
+  width: 87px;
+  height: 30px;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-menu {
@@ -130,7 +150,8 @@ export default {
   }
 
   .logo {
-    font-size: 1.2rem;
+    width: 70px;
+    height: 24px; /* Mantém proporção 87:30 */
   }
 }
 </style>

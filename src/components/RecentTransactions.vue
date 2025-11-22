@@ -110,7 +110,7 @@ export default {
 }
 
 .see-all-link {
-  color: #3b82f6;
+  color: #7986FE;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
@@ -118,7 +118,7 @@ export default {
 }
 
 .see-all-link:hover {
-  color: #2563eb;
+  color: #6b78ee;
   text-decoration: underline;
 }
 

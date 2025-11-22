@@ -52,8 +52,6 @@ export default {
 .statistics-panel {
   background: #202027;
   padding: 2rem;
-  position: relative;
-  z-index: 10;
 }
 
 .panel-content {

@@ -26,13 +26,15 @@
         <StatisticsPanel 
           :statistics="processedData.estatisticas" 
         />
-        <div class="bottom-section">
-          <RecentTransactions 
-            :transactions="processedData.transacoes" 
-          />
-          <GeneralAnalysis 
-            :analysis="processedData.analise" 
-          />
+        <div class="boxes-wrapper">
+          <div class="bottom-section">
+            <RecentTransactions 
+              :transactions="processedData.transacoes" 
+            />
+            <GeneralAnalysis 
+              :analysis="processedData.analise" 
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -181,7 +183,23 @@ export default {
 
 .cards-and-boxes-container {
   position: relative;
+  min-height: 500px;
+}
+
+.statistics-panel {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -80px;
   padding: 0 117px;
+}
+
+.boxes-wrapper {
+  background: white;
+  padding: 0 117px;
+  padding-top: 120px;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .bottom-section {
@@ -190,28 +208,22 @@ export default {
   gap: 2rem;
   justify-content: center;
   align-items: start;
-  padding-top: 100px;
-}
-
-.statistics-panel-wrapper {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 234px);
-  z-index: 10;
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .cards-and-boxes-container {
+  .statistics-panel {
     padding: 0 2rem;
+  }
+
+  .boxes-wrapper {
+    padding: 0 2rem;
+    padding-top: 100px;
   }
 
   .bottom-section {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-    padding-top: 80px;
   }
 
   .recent-transactions,
@@ -224,14 +236,18 @@ export default {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .cards-and-boxes-container {
+  .statistics-panel {
     padding: 0 1rem;
+  }
+
+  .boxes-wrapper {
+    padding: 0 1rem;
+    padding-top: 80px;
   }
 
   .bottom-section {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding-top: 60px;
   }
 
   .recent-transactions,

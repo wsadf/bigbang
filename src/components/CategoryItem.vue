@@ -134,14 +134,18 @@ export default {
   transition: width 0.5s ease;
 }
 
-/* Tablet */
+/* ============================================
+   RESPONSIVE - TABLET (até 1024px)
+   ============================================ */
 @media (max-width: 1024px) {
   .category-content {
     gap: 0.65rem;
   }
 }
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE - MOBILE (até 768px)
+   ============================================ */
 @media (max-width: 768px) {
   .category-content {
     gap: 0.6rem;
@@ -162,7 +166,9 @@ export default {
   }
 }
 
-/* Mobile pequeno */
+/* ============================================
+   RESPONSIVE - MOBILE PEQUENO (até 480px)
+   ============================================ */
 @media (max-width: 480px) {
   .category-item {
     gap: 0.4rem;

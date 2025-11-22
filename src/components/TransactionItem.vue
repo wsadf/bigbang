@@ -148,14 +148,18 @@ export default {
   flex-shrink: 0;
 }
 
-/* Tablet */
+/* ============================================
+   RESPONSIVE - TABLET (até 1024px)
+   ============================================ */
 @media (max-width: 1024px) {
   .transaction-item {
     padding: 0.9rem 0;
   }
 }
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE - MOBILE (até 768px)
+   ============================================ */
 @media (max-width: 768px) {
   .transaction-item {
     padding: 0.75rem 0;
@@ -181,7 +185,9 @@ export default {
   }
 }
 
-/* Mobile pequeno */
+/* ============================================
+   RESPONSIVE - MOBILE PEQUENO (até 480px)
+   ============================================ */
 @media (max-width: 480px) {
   .transaction-item {
     padding: 0.65rem 0;

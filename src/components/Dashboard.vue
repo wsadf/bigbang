@@ -224,10 +224,13 @@ export default {
   margin: 0 auto;
 }
 
-/* Tablet */
+/* ============================================
+   RESPONSIVE - TABLET (até 1024px)
+   ============================================ */
 @media (max-width: 1024px) {
   .statistics-panel {
     padding: 0 2rem;
+    margin-bottom: -80px;
   }
 
   .boxes-wrapper {
@@ -239,20 +242,15 @@ export default {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
-
-  .recent-transactions,
-  .general-analysis {
-    width: 100%;
-    height: auto;
-    min-height: 307px;
-    overflow: visible;
-  }
 }
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE - MOBILE (até 768px)
+   ============================================ */
 @media (max-width: 768px) {
   .statistics-panel {
     padding: 0 1rem;
+    margin-bottom: -60px;
   }
 
   .boxes-wrapper {
@@ -263,13 +261,6 @@ export default {
   .bottom-section {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .recent-transactions,
-  .general-analysis {
-    width: 100%;
-    height: auto;
-    min-height: 291px;
   }
 
   .loading-container,
@@ -297,11 +288,22 @@ export default {
   }
 }
 
-/* Mobile pequeno */
+/* ============================================
+   RESPONSIVE - MOBILE PEQUENO (até 480px)
+   ============================================ */
 @media (max-width: 480px) {
+  .statistics-panel {
+    padding: 0 0.75rem;
+    margin-bottom: -50px;
+  }
+
+  .boxes-wrapper {
+    padding: 0 0.75rem;
+    padding-top: 60px;
+  }
+
   .bottom-section {
     gap: 1rem;
-    padding: 0.75rem;
   }
 
   .loading-container,

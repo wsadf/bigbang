@@ -206,7 +206,9 @@ export default {
   opacity: 0.9;
 }
 
-/* Tablet */
+/* ============================================
+   RESPONSIVE - TABLET (até 1024px)
+   ============================================ */
 @media (max-width: 1024px) {
   .balance-section {
     padding: 2.5rem 1.5rem;
@@ -221,7 +223,9 @@ export default {
   }
 }
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE - MOBILE (até 768px)
+   ============================================ */
 @media (max-width: 768px) {
   .balance-section {
     padding: 2rem 1rem;
@@ -268,7 +272,9 @@ export default {
   }
 }
 
-/* Mobile pequeno */
+/* ============================================
+   RESPONSIVE - MOBILE PEQUENO (até 480px)
+   ============================================ */
 @media (max-width: 480px) {
   .balance-section {
     padding: 1.5rem 0.75rem;

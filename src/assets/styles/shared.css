@@ -48,6 +48,7 @@
 }
 
 /* Media queries compartilhadas */
+/* Tablet */
 @media (max-width: 1024px) {
   .card-container {
     width: 100%;
@@ -57,9 +58,17 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .card-container {
     min-height: 291px;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .card-container {
+    min-height: auto;
   }
 }
 

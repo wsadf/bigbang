@@ -64,6 +64,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 1.25rem 0.625rem 1.25rem;
+  padding-bottom: 27px;
   border-bottom: 1px solid var(--border-color-light);
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -119,7 +120,9 @@ export default {
   text-decoration: underline;
 }
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE - MOBILE (até 768px)
+   ============================================ */
 @media (max-width: 768px) {
   .section-header {
     flex-direction: column;
@@ -151,7 +154,9 @@ export default {
   }
 }
 
-/* Mobile pequeno */
+/* ============================================
+   RESPONSIVE - MOBILE PEQUENO (até 480px)
+   ============================================ */
 @media (max-width: 480px) {
   .section-header {
     margin-bottom: 1rem;

@@ -102,7 +102,9 @@ export default {
   color: var(--text-muted);
 }
 
-/* Tablet */
+/* ============================================
+   RESPONSIVE - TABLET (até 1024px)
+   ============================================ */
 @media (max-width: 1024px) {
   .statistics-panel {
     padding: 1.75rem 1.5rem;
@@ -114,7 +116,9 @@ export default {
   }
 }
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE - MOBILE (até 768px)
+   ============================================ */
 @media (max-width: 768px) {
   .statistics-panel {
     padding: 1.5rem 1rem;
@@ -140,7 +144,9 @@ export default {
   }
 }
 
-/* Mobile pequeno */
+/* ============================================
+   RESPONSIVE - MOBILE PEQUENO (até 480px)
+   ============================================ */
 @media (max-width: 480px) {
   .statistics-panel {
     padding: 1.25rem 0.75rem;

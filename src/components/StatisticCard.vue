@@ -154,7 +154,9 @@ export default {
   color: var(--text-primary);
 }
 
-/* Tablet */
+/* ============================================
+   RESPONSIVE - TABLET (até 1024px)
+   ============================================ */
 @media (max-width: 1024px) {
   .statistic-card {
     padding: 1.35rem;
@@ -165,7 +167,9 @@ export default {
   }
 }
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE - MOBILE (até 768px)
+   ============================================ */
 @media (max-width: 768px) {
   .statistic-card {
     padding: 1.25rem;
@@ -190,7 +194,9 @@ export default {
   }
 }
 
-/* Mobile pequeno */
+/* ============================================
+   RESPONSIVE - MOBILE PEQUENO (até 480px)
+   ============================================ */
 @media (max-width: 480px) {
   .statistic-card {
     padding: 1rem;

@@ -88,7 +88,7 @@ export default {
   flex: 1;
   overflow: visible;
   min-height: 0;
-  padding: 0 1.25rem 1.25rem 1.25rem;
+  padding: 15px 1.25rem 1.25rem 1.25rem;
 }
 
 .divider {
@@ -138,14 +138,18 @@ export default {
   padding: 1rem;
 }
 
-/* Tablet */
+/* ============================================
+   RESPONSIVE - TABLET (até 1024px)
+   ============================================ */
 @media (max-width: 1024px) {
   .summary-value {
     font-size: 1.35rem;
   }
 }
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE - MOBILE (até 768px)
+   ============================================ */
 @media (max-width: 768px) {
 
   .summary-row {
@@ -173,7 +177,9 @@ export default {
   }
 }
 
-/* Mobile pequeno */
+/* ============================================
+   RESPONSIVE - MOBILE PEQUENO (até 480px)
+   ============================================ */
 @media (max-width: 480px) {
 
   .summary-row {

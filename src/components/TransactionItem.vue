@@ -1,14 +1,18 @@
 <template>
   <div class="transaction-item">
-    <div class="transaction-icon" :style="{ backgroundColor: transaction.cor || getIconColor(transaction.categoria) }">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+    <div 
+      class="transaction-icon" 
+      :style="{ 
+        backgroundColor: transaction.cor || getIconColor(transaction.categoria),
+        borderColor: getBorderColor(transaction.cor || getIconColor(transaction.categoria))
+      }"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
       </svg>
     </div>
-    <div class="transaction-info">
-      <div class="transaction-name">{{ transaction.nome }}</div>
-      <div class="transaction-category">{{ transaction.categoria }}</div>
-    </div>
+    <div class="transaction-name">{{ transaction.nome }}</div>
     <div class="transaction-amount">{{ formatCurrency(transaction.valor) }}</div>
   </div>
 </template>
@@ -34,6 +38,12 @@ export default {
         'Outros': '#3b82f6'
       }
       return colors[category] || '#6b7280'
+    },
+    getBorderColor(color) {
+      // Cria uma versão mais clara da cor para a borda
+      if (!color) return '#e5e7eb'
+      // Se for uma cor hex, adiciona opacidade ou clareia
+      return color + '80' // Adiciona 50% de opacidade
     }
   }
 }
@@ -44,44 +54,38 @@ export default {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: background 0.3s;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
 }
 
-.transaction-item:hover {
-  background: #f9fafb;
+.transaction-item:last-child {
+  border-bottom: none;
 }
 
 .transaction-icon {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: 8px;
+  border: 1px solid;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.transaction-info {
-  flex: 1;
-}
-
 .transaction-name {
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 0.25rem;
-}
-
-.transaction-category {
-  font-size: 0.85rem;
-  color: #666;
+  flex: 1;
+  font-weight: 400;
+  color: #000;
+  font-size: 1rem;
 }
 
 .transaction-amount {
-  font-weight: 600;
-  color: #1a1a1a;
-  font-size: 1.1rem;
+  font-weight: 400;
+  color: #000;
+  font-size: 1rem;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {

@@ -119,7 +119,7 @@ export default {
 <style scoped>
 .dashboard {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: #1e1e1e;
 }
 
 .loading-container,

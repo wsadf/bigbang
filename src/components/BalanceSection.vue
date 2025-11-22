@@ -7,7 +7,7 @@
           {{ formatCurrency(balance) }}
         </div>
         <div class="yield-info" aria-label="Rendimento de {{ formatPercentage(yield) }}">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2" aria-hidden="true">
             <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
           </svg>
           <span>rendendo {{ formatPercentage(yield) }}</span>
@@ -20,7 +20,7 @@
           @keydown.enter.prevent="handleSendMoney"
           @keydown.space.prevent="handleSendMoney"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="22" y1="2" x2="11" y2="13"></line>
             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
           </svg>
@@ -109,14 +109,15 @@ export default {
 
 .balance-label {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: white;
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
 
 .balance-value {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -124,12 +125,13 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
   font-size: 1rem;
 }
 
 .yield-info svg {
   color: #fbbf24;
+  fill: #fbbf24;
 }
 
 .balance-actions {
@@ -152,23 +154,30 @@ export default {
 }
 
 .action-button.primary {
-  background: #8b5cf6;
+  background: #a78bfa;
   color: white;
+  border-radius: 8px;
 }
 
 .action-button.primary:hover {
-  background: #7c3aed;
+  background: #8b5cf6;
   transform: translateY(-2px);
 }
 
 .action-button.secondary {
-  background: #8b5cf6;
+  background: #a78bfa;
   color: white;
   padding: 0.875rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
 }
 
 .action-button.secondary:hover {
-  background: #7c3aed;
+  background: #8b5cf6;
   transform: translateY(-2px);
 }
 

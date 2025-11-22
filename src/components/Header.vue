@@ -99,18 +99,20 @@ export default {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
+  border-radius: 0;
   transition: all 0.3s;
   font-size: 0.95rem;
+  background: transparent;
 }
 
-.nav-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+.nav-item:hover:not(.active) {
+  opacity: 0.8;
 }
 
 .nav-item.active {
-  color: #ef4444;
-  background: rgba(239, 68, 68, 0.1);
+  color: white;
+  background: #ef4444;
+  border-radius: 0;
 }
 
 .header-actions {

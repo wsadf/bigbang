@@ -109,21 +109,21 @@ export default {
 }
 
 .category-name {
-  font-weight: 400;
-  color: #000;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
   font-size: 0.95rem;
 }
 
 .category-percentage {
-  font-weight: 400;
-  color: #000;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
   font-size: 0.95rem;
 }
 
 .progress-bar-container {
   width: 100%;
   height: 8px;
-  background: #e5e7eb;
+  background: var(--border-color-light);
   border-radius: 0;
   overflow: hidden;
 }

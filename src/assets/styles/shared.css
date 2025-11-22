@@ -1,0 +1,65 @@
+/**
+ * Estilos compartilhados e utilitários
+ * Classes reutilizáveis e padrões comuns
+ */
+
+/* Card container padrão */
+.card-container {
+  background: var(--bg-white);
+  border-radius: 0;
+  padding: 0;
+  padding-bottom: var(--card-padding-bottom);
+  box-shadow: none;
+  width: var(--card-width);
+  height: var(--card-height);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Empty state padrão */
+.empty-state {
+  text-align: center;
+  color: var(--text-muted-dark);
+  padding: 2rem;
+  font-size: var(--font-size-sm);
+}
+
+/* Divider padrão */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color-light);
+  flex-shrink: 0;
+}
+
+/* Lista scrollável padrão */
+.scrollable-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+  padding: 0 1.25rem;
+  margin: 0;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Media queries compartilhadas */
+@media (max-width: 1024px) {
+  .card-container {
+    width: 100%;
+    height: auto;
+    min-height: 307px;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    min-height: 291px;
+  }
+}
+

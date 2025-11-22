@@ -51,7 +51,7 @@ export default {
 <style scoped>
 .statistics-panel {
   background: transparent;
-  padding: 2rem;
+  padding: var(--spacing-xl);
 }
 
 .panel-content {
@@ -62,7 +62,7 @@ export default {
 .panel-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-lg);
   color: white;
   gap: 18px;
 }
@@ -74,21 +74,21 @@ export default {
 }
 
 .panel-icon {
-  width: 20px;
-  height: 20px;
+  width: var(--icon-size-base);
+  height: var(--icon-size-base);
   display: block;
   flex-shrink: 0;
 }
 
 .header-left h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
   margin: 0;
 }
 
 .time-period {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
 }
 
 .statistics-grid {
@@ -98,11 +98,8 @@ export default {
 }
 
 .empty-state {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 2rem;
-  font-size: 0.95rem;
   grid-column: 1 / -1;
+  color: var(--text-muted);
 }
 
 /* Tablet */

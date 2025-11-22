@@ -106,7 +106,7 @@ export default {
   align-items: center;
   gap: 0.75rem;
   padding: 0;
-  border-bottom: 1px solid #B3B3B3;
+  border-bottom: 1px solid var(--border-color-medium);
   position: relative;
   height: 50px;
   flex-shrink: 0;
@@ -114,7 +114,7 @@ export default {
 }
 
 .transaction-item:last-child {
-  border-bottom: 1px solid #B3B3B3;
+  border-bottom: 1px solid var(--border-color-medium);
 }
 
 .transaction-icon {
@@ -136,14 +136,14 @@ export default {
 
 .transaction-name {
   flex: 1;
-  font-weight: 400;
-  color: #000;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
   font-size: 14px;
 }
 
 .transaction-amount {
-  font-weight: 400;
-  color: #000;
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
   font-size: 14px;
   flex-shrink: 0;
 }

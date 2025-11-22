@@ -2,8 +2,9 @@
  * Estilos globais da aplicação
  */
 
-/* Importar variáveis CSS */
+/* Importar variáveis CSS e estilos compartilhados */
 @import './variables.css';
+@import './shared.css';
 
 /* Reset e estilos globais */
 * {

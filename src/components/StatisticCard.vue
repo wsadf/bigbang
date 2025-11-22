@@ -81,27 +81,27 @@ export default {
 
 <style scoped>
 .statistic-card {
-  background: white;
+  background: var(--bg-white);
   border-radius: 0;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s;
+  transition: box-shadow var(--transition-base);
   min-height: 180px;
 }
 
 .card-title {
-  font-size: 0.9rem;
-  color: #000;
-  font-weight: 500;
-  margin: 0 0 1.5rem 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  margin: 0 0 var(--spacing-lg) 0;
 }
 
 .card-value {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #000;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
   margin: 0 0 auto 0;
   flex-grow: 1;
   line-height: 1.2;
@@ -117,41 +117,41 @@ export default {
 
 .details-button {
   background: transparent;
-  border: 1px solid #999;
-  color: #666;
+  border: 1px solid var(--border-color-dark);
+  color: var(--text-secondary);
   cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 0;
-  transition: all 0.3s;
+  transition: all var(--transition-base);
   flex: 1;
 }
 
 .details-button:hover {
-  border-color: #666;
-  color: #333;
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .menu-button {
   background: transparent;
-  border: 1px solid #999;
-  color: #666;
+  border: 1px solid var(--border-color-dark);
+  color: var(--text-secondary);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: var(--spacing-sm);
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0;
-  transition: all 0.3s;
+  transition: all var(--transition-base);
   flex-shrink: 0;
 }
 
 .menu-button:hover {
-  border-color: #666;
-  color: #333;
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 /* Tablet */

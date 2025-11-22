@@ -1,22 +1,13 @@
 <template>
-  <section class="general-analysis" aria-labelledby="analysis-title">
-    <div class="section-header">
-      <div class="header-left">
-        <img 
-          src="@/assets/icons/story.svg" 
-          alt="Ícone de análise" 
-          class="analysis-icon"
-          width="20"
-          height="20"
-          aria-hidden="true"
-        />
-        <h3 id="analysis-title">Análise geral</h3>
-        <span class="time-period" aria-label="Período: últimos 7 dias">últimos 7 dias</span>
-      </div>
-      <div class="header-right">
-        <a href="#" class="see-all-link" aria-label="Ver análise completa">Ver tudo</a>
-      </div>
-    </div>
+  <section class="general-analysis card-container" aria-labelledby="analysis-title">
+    <SectionHeader
+      :icon="storyIcon"
+      icon-alt="Ícone de análise"
+      title="Análise geral"
+      title-id="analysis-title"
+      time-period="últimos 7 dias"
+      see-all-label="Ver análise completa"
+    />
     <div class="analysis-content">
       <div class="summary-row" role="group" aria-label="Resumo financeiro">
         <div class="summary-item">
@@ -54,11 +45,19 @@
  */
 import { formatCurrency } from '../services/api'
 import CategoryItem from './CategoryItem.vue'
+import SectionHeader from './shared/SectionHeader.vue'
+import storyIcon from '@/assets/icons/story.svg'
 
 export default {
   name: 'GeneralAnalysis',
   components: {
-    CategoryItem
+    CategoryItem,
+    SectionHeader
+  },
+  data() {
+    return {
+      storyIcon
+    }
   },
   props: {
     analysis: {
@@ -79,85 +78,7 @@ export default {
 
 <style scoped>
 .general-analysis {
-  background: white;
-  border-radius: 0;
-  padding: 0;
-  padding-bottom: 47px;
-  box-shadow: none;
-  width: 479px;
-  height: 307px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.375rem;
-  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e5e7eb;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  flex-shrink: 0;
-}
-
-.header-right {
-  flex-shrink: 0;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex: 1;
-}
-
-.header-left .time-period {
-  margin-left: 0.5rem;
-}
-
-.analysis-icon {
-  width: 20px;
-  height: 20px;
-  display: block;
-  flex-shrink: 0;
-}
-
-.header-left h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
-  color: #1a1a1a;
-  line-height: 1;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.time-period {
-  color: #999;
-  font-size: 0.9rem;
-}
-
-.see-all-link {
-  color: #7986FE;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.see-all-link:hover {
-  color: #6b78ee;
-  text-decoration: underline;
+  /* Estilos herdados de .card-container */
 }
 
 .analysis-content {
@@ -171,11 +92,7 @@ export default {
 }
 
 .divider {
-  width: 100%;
-  height: 1px;
-  background: #e5e7eb;
   margin: 0.125rem 0 0.25rem 0;
-  flex-shrink: 0;
 }
 
 .summary-row {
@@ -218,18 +135,11 @@ export default {
 }
 
 .empty-state {
-  text-align: center;
-  color: #999;
   padding: 1rem;
-  font-size: 0.95rem;
 }
 
 /* Tablet */
 @media (max-width: 1024px) {
-  .general-analysis {
-    padding: 1.35rem;
-  }
-
   .summary-value {
     font-size: 1.35rem;
   }
@@ -237,38 +147,6 @@ export default {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .general-analysis {
-    padding: 1.25rem;
-  }
-
-  .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .header-left {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .header-left h3 {
-    font-size: 1.1rem;
-  }
-
-  .header-left .time-period {
-    margin-left: 0;
-    font-size: 0.85rem;
-  }
-
-  .header-right {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .see-all-link {
-    font-size: 0.85rem;
-  }
 
   .summary-row {
     flex-direction: column;
@@ -297,26 +175,6 @@ export default {
 
 /* Mobile pequeno */
 @media (max-width: 480px) {
-  .general-analysis {
-    padding: 1rem 0.75rem;
-  }
-
-  .section-header {
-    margin-bottom: 1rem;
-  }
-
-  .header-left h3 {
-    font-size: 1rem;
-  }
-
-  .analysis-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .see-all-link {
-    font-size: 0.8rem;
-  }
 
   .summary-row {
     padding: 1rem 0;

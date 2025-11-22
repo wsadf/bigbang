@@ -207,8 +207,7 @@ export default {
 
 .boxes-wrapper {
   background: white;
-  padding: 0 117px;
-  padding-top: 120px;
+  padding-top: 80px;
   padding-bottom: 2rem;
   position: relative;
   z-index: 1;

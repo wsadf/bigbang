@@ -11,7 +11,7 @@ export function focusFirstElement(container: HTMLElement): void {
     'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
   )
 
-  if (focusableElements.length > 0) {
+  if (focusableElements.length > 0 && focusableElements[0]) {
     focusableElements[0].focus()
   }
 }

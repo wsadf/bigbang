@@ -12,8 +12,7 @@
 import axios, { AxiosError, AxiosInstance } from 'axios'
 import type {
   ApiResponse,
-  TransformedDashboardData,
-  ApiError
+  TransformedDashboardData
 } from '@/types/api'
 
 // URL base da API

@@ -217,7 +217,7 @@ export default {
 }
 
 .boxes-wrapper {
-  background: white;
+  
   padding-top: 80px;
   padding-bottom: 2rem;
   position: relative;

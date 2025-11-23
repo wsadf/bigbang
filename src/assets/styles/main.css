@@ -11,6 +11,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
 }
 
 body {
@@ -18,7 +20,7 @@ body {
   font-weight: var(--font-weight-regular);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to bottom, #202027 0%, #202027 50%, #ffffff 50%, #ffffff 100%);
+  background: linear-gradient(to bottom, #202027 0%, #202027 60%, #ffffff 40%, #ffffff 100%);
   background-size: 100% 800px;
   background-repeat: no-repeat;
   color: white;
@@ -80,22 +82,10 @@ select:focus {
   top: 0;
 }
 
-/* Scrollbar personalizada */
+/* Scrollbar escondida */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: var(--border-radius-sm);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  width: 0;
+  height: 0;
+  display: none;
 }
 

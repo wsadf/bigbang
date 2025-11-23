@@ -27,10 +27,13 @@
           @keydown.enter.prevent="handleSendMoney"
           @keydown.space.prevent="handleSendMoney"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="22" y1="2" x2="11" y2="13"></line>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-          </svg>
+          <img 
+            src="@/assets/icons/send.svg" 
+            alt="Ícone de enviar" 
+            width="20"
+            height="20"
+            aria-hidden="true"
+          />
           Enviar dinheiro
         </button>
         <button 
@@ -96,7 +99,7 @@ export default {
 <style scoped>
 .balance-section {
   background: #202027;
-  padding: 3rem 2rem 0 2rem;
+  padding: 100px 117px 0 117px;
   color: white;
 }
 

@@ -109,6 +109,7 @@ export default {
   flex-direction: column;
   gap: 0.25rem;
   flex: 0 0 auto;
+  margin-bottom: 14px
 }
 
 .summary-label {
@@ -126,6 +127,7 @@ export default {
 }
 
 .categories-list {
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
   gap: 0.375rem;

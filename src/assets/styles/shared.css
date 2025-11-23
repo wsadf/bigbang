@@ -8,7 +8,6 @@
   background: var(--bg-white);
   border-radius: 0;
   padding: 0;
-  padding-bottom: var(--card-padding-bottom);
   box-shadow: none;
   width: var(--card-width);
   height: var(--card-height);

@@ -51,7 +51,7 @@ export default {
 <style scoped>
 .statistics-panel {
   background: transparent;
-  padding: var(--spacing-xl);
+  padding: var(--spacing-xl) 117px;
 }
 
 .panel-content {

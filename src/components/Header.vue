@@ -134,7 +134,6 @@ export default {
 
 <style scoped>
 .header {
-  background: #1a1a1a;
   padding: 1.5rem 2rem;
   position: sticky;
   top: 0;
@@ -302,6 +301,7 @@ export default {
 @media (max-width: 768px) {
   .header {
     padding: 1rem;
+    background: #1a1a1a;
   }
 
   .header-content {
@@ -391,6 +391,7 @@ export default {
 @media (max-width: 480px) {
   .header {
     padding: 0.75rem;
+    background: #1a1a1a;
   }
 
   .header-left {

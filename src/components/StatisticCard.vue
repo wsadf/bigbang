@@ -87,11 +87,17 @@ export default {
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  transition: box-shadow var(--transition-base);
+  transition: all var(--transition-base) ease;
   width: 351px;
   height: 209px;
   box-sizing: border-box;
   overflow: visible;
+  cursor: pointer;
+}
+
+.statistic-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .card-title {
@@ -102,8 +108,8 @@ export default {
 }
 
 .card-value {
-  font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-bold);
+  font-size: 24px;
+  font-weight: 500;
   color: var(--text-primary);
   margin: 0 0 auto 0;
   flex-grow: 1;
@@ -142,8 +148,10 @@ export default {
 }
 
 .details-button:hover {
-  border-color: var(--text-secondary);
+  border-color: var(--text-primary);
   color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.02);
+  transform: translateY(-1px);
 }
 
 .menu-button {
@@ -163,8 +171,10 @@ export default {
 }
 
 .menu-button:hover {
-  border-color: var(--text-secondary);
+  border-color: var(--text-primary);
   color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.02);
+  transform: scale(1.05);
 }
 
 /* ============================================

@@ -82,7 +82,7 @@ export default {
 
 .header-left h3 {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
+  font-weight: 500;
   margin: 0;
 }
 

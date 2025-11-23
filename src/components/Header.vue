@@ -194,11 +194,28 @@ export default {
   display: flex;
   align-items: center;
   text-decoration: none;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.logo-link:hover::after {
+  left: 100%;
 }
 
 .logo-link:hover {
-  opacity: 0.8;
+  transform: scale(1.05);
 }
 
 .logo {
@@ -206,6 +223,9 @@ export default {
   height: 30px;
   display: block;
   object-fit: contain;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .nav-menu {
@@ -221,14 +241,17 @@ export default {
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 0;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   font-size: 0.95rem;
   background: transparent;
   display: block;
+  position: relative;
 }
 
 .nav-item:hover:not(.active) {
-  opacity: 0.8;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
 }
 
 .nav-item.active {
@@ -253,11 +276,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .icon-button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
 }
 
 .notification-icon {
@@ -367,8 +391,9 @@ export default {
   }
 
   .nav-item:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     opacity: 1;
+    transform: translateX(4px);
   }
 
   .nav-item.active {

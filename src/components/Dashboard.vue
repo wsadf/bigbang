@@ -178,11 +178,13 @@ export default {
   border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .retry-button:hover {
   background: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
 }
 
 .dashboard-content {

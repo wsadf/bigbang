@@ -132,8 +132,8 @@ export default {
 }
 
 .balance-value {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 500;
   color: white;
   margin: 0;
 }
@@ -187,7 +187,8 @@ export default {
 
 .action-button.primary:hover {
   background: #6b78ee;
-  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(121, 134, 254, 0.4);
 }
 
 .action-button.secondary {
@@ -206,7 +207,8 @@ export default {
 
 .action-button.secondary:hover {
   background: #6b78ee;
-  opacity: 0.9;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(121, 134, 254, 0.4);
 }
 
 /* ============================================

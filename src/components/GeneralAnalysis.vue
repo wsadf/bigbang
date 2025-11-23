@@ -120,8 +120,8 @@ export default {
 }
 
 .summary-value {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   color: #000;
   line-height: 1.2;
 }

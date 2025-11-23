@@ -87,7 +87,7 @@ export default {
 
 .header-left h3 {
   font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
+  font-weight: 500;
   margin: 0;
   padding: 0;
   color: var(--text-primary);
@@ -112,12 +112,14 @@ export default {
   text-decoration: none;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  transition: color var(--transition-base);
+  transition: all var(--transition-base) ease;
+  position: relative;
 }
 
 .see-all-link:hover {
   color: var(--color-link-hover);
   text-decoration: underline;
+  transform: translateX(2px);
 }
 
 /* ============================================

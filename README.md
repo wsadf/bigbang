@@ -4,7 +4,7 @@ Dashboard financeiro responsivo desenvolvido com Vue.js que consome dados de uma
 
 ## 🚀 Deploy
 
-Acesse o projeto em: <a href="https://bigbang-gamma.vercel.app/" target="_blank" rel="noopener noreferrer">bigbang-gamma.vercel.app</a>
+<a href="https://bigbang-gamma.vercel.app/" target="_blank" rel="noopener noreferrer">Acesse o projeto em: https://bigbang-gamma.vercel.app/</a>
 
 ## 📦 Scripts Disponíveis
 

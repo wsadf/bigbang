@@ -1,122 +1,122 @@
 # BigBang Dashboard
 
-Dashboard financeiro responsivo desenvolvido com Vue.js que consome dados de uma API e exibe informações financeiras de forma clara e intuitiva. O projeto apresenta dados de saldo, rendimento, estatísticas, transações recentes e análise de gastos.
+Dashboard financeiro que funciona bem em celular, tablet e computador. Mostra informações sobre saldo, ganhos, gastos, transações recentes e análise de categorias de forma clara e fácil de entender.
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Vue 3** - Framework JavaScript reativo
-- **TypeScript** - Tipagem estática para maior segurança de código
-- **Vite** - Build tool moderna e rápida
-- **Axios** - Cliente HTTP para requisições à API
-- **CSS3** - Estilização com variáveis CSS e design responsivo
-- **Vitest** - Framework de testes
+- **Vue 3** - Biblioteca JavaScript para criar interfaces
+- **TypeScript** - JavaScript com tipos para evitar erros
+- **Vite** - Ferramenta rápida para criar o projeto
+- **Axios** - Biblioteca para fazer requisições à API
+- **CSS3** - Estilos e cores do projeto
+- **Vitest** - Ferramenta para testar o código
 
 ## 📦 Como Instalar Dependências
 
-Certifique-se de ter o [Node.js](https://nodejs.org/) instalado (versão 18 ou superior) e o npm.
+Primeiro, você precisa ter o [Node.js](https://nodejs.org/) instalado no seu computador (versão 18 ou mais nova).
 
 ```bash
-# Clone o repositório
+# Copiar o projeto do GitHub
 git clone https://github.com/wsadf/bigbang.git
 
-# Entre na pasta do projeto
+# Entrar na pasta do projeto
 cd bigbang
 
-# Instale as dependências
+# Instalar as bibliotecas necessárias
 npm install
 ```
 
 ## 🚀 Como Rodar o Projeto Localmente
 
-Após instalar as dependências, você pode rodar o projeto em modo de desenvolvimento:
+Depois de instalar as dependências, você pode abrir o projeto no navegador:
 
 ```bash
-# Iniciar servidor de desenvolvimento
+# Iniciar o projeto
 npm run dev
 ```
 
-O projeto estará disponível em `http://localhost:3000` (ou outra porta se a 3000 estiver ocupada).
+O projeto vai abrir automaticamente em `http://localhost:3000` no seu navegador.
 
 ### Outros comandos úteis:
 
 ```bash
-# Build para produção
+# Criar versão para produção
 npm run build
 
-# Preview do build de produção
+# Ver como ficará a versão de produção
 npm run preview
 
-# Verificação de tipos TypeScript
+# Verificar se há erros no código
 npm run type-check
 
-# Executar testes
+# Rodar os testes
 npm run test
 ```
 
 ## 🌐 Deploy
 
-Acesse o projeto: [https://bigbang-gamma.vercel.app/](https://bigbang-gamma.vercel.app/) (Ctrl+Click ou Cmd+Click para abrir em nova guia)
+Acesse o projeto online: [https://bigbang-gamma.vercel.app/](https://bigbang-gamma.vercel.app/) (Ctrl+Click ou Cmd+Click para abrir em nova guia)
 
 ## 🎯 Decisões Técnicas Tomadas
 
-### Arquitetura e Estrutura
-- **Componentes Vue 3 com Composition API**: Escolhido para melhor organização e reutilização de código
-- **TypeScript**: Implementado para type safety e melhor experiência de desenvolvimento
-- **Separação de responsabilidades**: Componentes, serviços, tipos e utilitários organizados em pastas distintas
+### Organização do Código
+- **Componentes Vue 3**: Escolhido para organizar melhor o código e facilitar a manutenção
+- **TypeScript**: Usado para evitar erros e facilitar o desenvolvimento
+- **Pastas organizadas**: Cada tipo de arquivo fica em sua pasta (componentes, serviços, estilos, etc)
 
 ### Performance
-- **Lazy loading de componentes**: Componentes pesados são carregados sob demanda usando `defineAsyncComponent`
-- **Code splitting**: Configurado no Vite para dividir o bundle em chunks menores
-- **Otimizações de build**: Minificação com esbuild, tree shaking e otimização de assets
+- **Carregamento sob demanda**: Componentes grandes só são carregados quando necessário
+- **Código dividido**: O projeto é dividido em partes menores para carregar mais rápido
+- **Otimizações**: Código minificado e otimizado para funcionar mais rápido
 
 ### Acessibilidade
-- **ARIA labels**: Implementados em todos os elementos interativos
-- **Navegação por teclado**: Suporte completo para navegação sem mouse
-- **Screen readers**: Elementos semânticos e labels apropriados
+- **Labels descritivos**: Todos os botões e links têm descrições para leitores de tela
+- **Navegação por teclado**: É possível usar o projeto apenas com o teclado
+- **Elementos semânticos**: Uso de tags HTML corretas para melhor compreensão
 
 ### Responsividade
-- **Mobile-first approach**: Design pensado primeiro para mobile
-- **Breakpoints**: 480px (mobile pequeno), 768px (mobile), 1024px (tablet)
-- **Menu hambúrguer**: Implementado para navegação mobile
+- **Design mobile primeiro**: O projeto foi pensado primeiro para celular
+- **Tamanhos de tela**: Funciona bem em celular (480px), tablet (768px) e computador (1024px+)
+- **Menu hambúrguer**: Menu especial para telas pequenas
 
-### Estilização
-- **Variáveis CSS**: Uso de variáveis para cores, espaçamentos e tipografia
-- **Scoped styles**: Estilos isolados por componente para evitar conflitos
-- **Design system**: Padrões consistentes de cores, espaçamentos e componentes
+### Estilos
+- **Variáveis CSS**: Cores e tamanhos definidos em um só lugar para facilitar mudanças
+- **Estilos isolados**: Cada componente tem seus próprios estilos sem conflitar com outros
+- **Design consistente**: Cores, espaçamentos e componentes seguem um padrão
 
 ### Tratamento de Erros
-- **Retry automático**: Implementado com backoff exponencial para requisições falhadas
-- **Estados de loading e erro**: Feedback visual claro para o usuário
-- **Validação de dados**: Validação de tipos e estrutura dos dados da API
+- **Tentativas automáticas**: Se uma requisição falhar, o sistema tenta novamente automaticamente
+- **Mensagens claras**: Quando algo dá errado, o usuário vê uma mensagem explicativa
+- **Validação de dados**: Os dados recebidos são verificados antes de serem usados
 
 ## 🔮 Melhorias Futuras
 
-- [ ] Implementar testes unitários mais abrangentes
-- [ ] Adicionar testes E2E com Cypress ou Playwright
-- [ ] Implementar cache de dados da API
-- [ ] Adicionar suporte a temas (dark/light mode)
-- [ ] Implementar filtros e ordenação nas transações
-- [ ] Adicionar gráficos interativos para visualização de dados
-- [ ] Implementar notificações em tempo real
-- [ ] Adicionar suporte a múltiplas moedas
-- [ ] Implementar exportação de relatórios (PDF/CSV)
-- [ ] Adicionar autenticação de usuários
-- [ ] Implementar PWA (Progressive Web App)
-- [ ] Adicionar internacionalização (i18n)
+- [ ] Adicionar mais testes automatizados
+- [ ] Testes de ponta a ponta (E2E)
+- [ ] Guardar dados em cache para carregar mais rápido
+- [ ] Adicionar modo escuro/claro
+- [ ] Filtros e ordenação nas transações
+- [ ] Gráficos interativos para visualizar os dados
+- [ ] Notificações em tempo real
+- [ ] Suporte para diferentes moedas
+- [ ] Exportar relatórios em PDF ou CSV
+- [ ] Sistema de login de usuários
+- [ ] Transformar em aplicativo (PWA)
+- [ ] Suporte para outros idiomas
 
 ## 📁 Estrutura do Projeto
 
 ```
 src/
-├── components/          # Componentes Vue
-│   ├── shared/         # Componentes compartilhados
+├── components/          # Componentes da interface
+│   ├── shared/         # Componentes que são usados em vários lugares
 │   └── __tests__/      # Testes dos componentes
-├── services/           # Serviços (API)
+├── services/           # Código que se comunica com a API
 │   └── __tests__/      # Testes dos serviços
-├── assets/             # Assets estáticos
-│   ├── icons/          # Ícones SVG
+├── assets/             # Arquivos estáticos
+│   ├── icons/          # Ícones
 │   ├── images/         # Imagens
 │   └── styles/         # Estilos globais
-├── types/              # Definições TypeScript
-└── utils/              # Utilitários
+├── types/              # Definições de tipos TypeScript
+└── utils/              # Funções auxiliares
 ```

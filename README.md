@@ -2,6 +2,14 @@
 
 Dashboard financeiro que funciona bem em celular, tablet e computador. Mostra informações sobre saldo, ganhos, gastos, transações recentes e análise de categorias de forma clara e fácil de entender.
 
+## 📸 Preview
+
+### Desktop
+![Desktop](screenshots/desktop.png)
+
+### Mobile
+![Mobile](screenshots/mobile.png)
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Vue 3** - Biblioteca JavaScript para criar interfaces
